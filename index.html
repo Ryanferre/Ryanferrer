@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryanferrer</title>
+    <script src="index.js"></script>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: box-model;
+        }
+        html{
+            min-height: 100vh;
+        }
+        .Unit{
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            min-height: 100vh;
+            background-color: black;
+        }
+        .Look p{
+            color: white;
+            font-family: 'Mukta', sans-serif;
+            font-size: clamp(.8rem, 2.5vw, 1.0rem);
+            text-transform: uppercase;
+            width: 38vmax;
+        }
+        h4{
+            color: rgb(255, 255, 255);
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(.3rem, 2.5vw, 1.0rem);
+            text-transform: uppercase;
+            height: max-content;
+            width: 20vmax;
+            margin: 1px;
+            text-align: center;
+            letter-spacing: 8px;
+        }
+        h3{
+            color: rgb(255, 255, 255);
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(1.0rem, 2.5vw, 1.3rem);
+            text-transform: uppercase;
+            height: max-content;
+            min-width: max-content;
+            margin: 1px;
+            transform: rotateZ(-90deg);
+            text-align: center;
+            letter-spacing: 8px;
+        }
+        .Styli h2{
+            color: rgb(157, 0, 255);
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.0rem, 2.5vw, 2.5rem);
+            font-weight: bolder;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 10px rgb(158, 1, 248);
+        }
+        .Contate h2{
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(1.3rem, 2.5vw, 2.5rem);
+            font-weight: bolder;
+            text-transform: uppercase;
+            margin-bottom: 15%;
+        }
+        h1{
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.5rem, 2.5vw, 3.0rem);
+            color: rgb(255, 0, 153);
+            letter-spacing: 20px;
+        }
+        .Styli{
+            background-color: rgb(0, 0, 0);
+            grid-row: 1/5;
+            grid-column: 1;
+            width: 6.5vmax;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0px 0px 10px rgb(158, 1, 248);
+            gap: 25%;
+            z-index: 5;
+        }
+        .OpenMenu{
+            width: 3.5vmax;
+            height: 3.5vmax;
+            border-radius: 50px;
+            border: none;
+            border: solid 2px rgb(0, 0, 0);
+            background-color: black;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            z-index: 4;
+        }
+        .OpenMenu:hover{
+            border-color: blueviolet;
+            box-shadow: 0px 0px 10px rgb(158, 1, 248);
+        }
+        #Click{
+            border: solid 1px white;
+            width: 2vmax;
+            height: 2px;
+            content: '';
+            background-color: white;
+            border-radius: 50px;
+            flex-shrink: 1;
+        }
+        .Look{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(108, 0, 250, 0);
+            width: 50vmax;
+            grid-row: 1/5;
+            grid-column: 2;
+            margin-left: 0%;
+            position: relative;
+            left: -100%;
+            top: 0;
+            z-index: 3;
+            transition: .5s;
+        }
+        .MenDiv{
+            width: 35vw;
+            height: max-content;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            left: 240%;
+        }
+        .Infor{
+            background-color: rgba(0, 0, 0, 0);
+            display: flex;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 30vmax;
+            height: 4.5vmax;
+            z-index: 2;
+            position: relative;
+            left: -140%;
+            transition: .5s;
+            opacity: 0;
+        }
+        .InforMobile{
+            display: none;
+        }
+        .Infor li button{
+            list-style: none;
+            color: rgb(255, 0, 166);
+            width: 8vmax;
+            height: 3vmax;
+            text-align: center;
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            cursor: pointer;
+            font-family: 'Mukta', sans-serif;
+            text-transform: uppercase;
+            font-size: clamp(.2rem, 2.5vw, .9rem);
+            transition: .3s;
+            border-left: solid 2px rgba(0, 0, 0, 0);
+            border-right: solid 2px rgba(137, 43, 226, 0);
+            border-bottom: solid 2px rgba(137, 43, 226, 0);
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .Infor li button:Hover{
+           color: rgb(195, 99, 255);
+           border-left: solid 2px blueviolet;
+           border-right: solid 2px blueviolet;
+           border-bottom: solid 2px blueviolet;
+           box-shadow: 0px 0px 10px rgb(181, 54, 254);
+        }
+        .Infor li{
+            list-style: none;
+            width: max-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .Contate{
+            grid-row: 1/5;
+            width: 40vmax;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            grid-column: 2;
+            position: relative;
+            left: 8%;
+            transition: .5s;
+            z-index: 1;
+        }
+        .ClickProject{
+            width: 11vmax;
+            padding: 3px 0 3px;
+            border: none;
+            border: solid  2px black;
+            border-radius: 50px;
+            background-color: rgba(137, 43, 226, 0);
+            box-shadow: 0px 0px 10px rgb(255, 0, 234);
+            transition: .3s;
+            cursor: pointer;
+            position: relative;
+            top: -10%;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .ClickProject:hover{
+            box-shadow: 0px 0px 15px rgb(181, 54, 254);
+            border-color: rgb(183, 43, 226);
+        }
+       .MagImg{
+        content: '';
+        grid-row: 1/5;
+        grid-column: 3;
+        width: 40vw;
+        background-image: url(imagem/computer.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-Y: 56%;
+        border: solid 1px;
+        position: relative;
+        left: 0;
+       }
+       a{
+        color: white;
+        text-decoration: none;
+        font-family: 'Mukta', sans-serif;
+        font-size: clamp(.8rem, 2.5vw, 1.0rem);
+       }
+       .BehavioLeter{
+        grid-column: 2;
+        grid-row: 1;
+        width: max-content;
+        position: relative;
+        left: -100%;
+        grid-row: 1/4;
+        transition: .5s;
+        z-index: 2;
+       }
+       .BehavioLeter ul{
+        height: 100%;
+        width: 15vmax;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20%;
+        position: relative;
+        top: 10%;
+       }
+       .BehavioLeter ul li{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Mukta', sans-serif;
+        font-size: clamp(.2rem, 2.5vw, .9rem);
+        flex-basis: 1;
+        flex-shrink: 1;
+        width: 9vw;
+        height: 10vh;
+       }
+       .BehavioLeter ul li svg{
+        width: 3vw;
+        height: 3vh;
+       }
+       .Habilit{
+        grid-column: 2;
+        grid-row: 1/5;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        left: -110%;
+        width: 100%;
+        transition: .5s;
+        z-index: 3;
+       }
+       .cssHabilit, .html, .jv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+       }
+       .cssHabilit, .html, .jv, ul{
+        flex-basis: 1;
+        flex-grow: 1;
+       }
+       .css, .html, .jv, li{
+        color: white;
+        font-family: 'Oswald', sans-serif;
+        font-size: clamp(.2rem, 2.5vw, .9rem);
+        list-style: none;
+        flex-basis: 1;
+        flex-grow: 1;
+       }
+       .ImgLinguageHtml, .ImgLinguageJv, .ImgLinguageCss{
+        width: 100%;
+        height: max-content;
+        flex-basis: 1;
+        flex-grow: 1;
+        flex-shrink: 200;
+       }
+       .ImgLinguageHtml, .ImgLinguageJv,  .ImgLinguageCss, svg{
+        filter: drop-shadow(3px 2px 1.5px rgba(118, 0, 187, 0.726));
+        width: 100%;
+        height: 20vh;
+        flex-shrink: 200;
+        flex-grow: 1;
+        flex-basis: 1;
+       }
+       .ImgLinguageHtml, .ImgLinguageJv, .ImgLinguageCss, svg path{
+        flex-basis: 1;
+        flex-grow: 1;
+        flex-shrink: 200;
+       }
+      
+
+
+
+
+       /*aplicação mobile*/
+
+       @media (max-width: 900px) {
+        .Unit{
+            display: flex;
+            flex-direction: column;
+        }
+        .Styli{
+           width: 100%;
+           height: 8vmax;
+           display: flex;
+           flex-direction: row;
+           justify-content: space-evenly;
+           gap: 14%;
+           z-index: 1;
+        }
+        h3{
+            transform: rotateY(0);
+        }
+        .OpenMenu{
+            width: 5.5vmax;
+            height: 5.5vmax;
+            border-radius: 10px;
+        }
+        .MenDiv{
+            width: max-content;
+            height: max-content;
+            flex-direction: column;
+            left: 0%;
+        }
+        .InforMobile{
+            height: 6vmax;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            position: relative;
+            align-items: center;
+            left: -95%;
+            transition: .5s;
+            z-index: 4;
+        }
+        .Infor{
+            display: none;
+        }
+        .InforMobile li{
+            list-style: none;
+            width: max-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .InforMobile li button{
+            border-radius: 0;
+            transition: .1s;
+            background-color: rgba(249, 89, 89, 0);
+            width: max-content;
+            height: max-content;
+            color: white;
+            border: none;
+        }
+        .InforMobile li button:hover{
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            box-shadow: none;
+            color: rgb(195, 99, 255);
+        }
+        .Look{
+           position: absolute;
+           top: 20%;
+           height: max-content;
+           width: 90%;
+           z-index: 2;
+        }
+        .Look p{
+            width: 90%;
+        }
+        .MagImg{
+            margin: 0% auto 0;
+            background-size: contain;
+            background-position: 40%;
+            left: 0;
+            height: 45vmax;
+            width: 90%;
+            flex-shrink: 0;
+        }
+        .BehavioLeter{
+            position: absolute;
+            width: 100%;
+            height: max-content;
+            left: -100%;
+            top: 20%;
+        }
+        .BehavioLeter ul{
+            flex-direction: row;
+            height: max-content;
+            width: 100%;
+        }
+        .BehavioLeter ul li{
+            height: 8vmax;
+        }
+        .BehavioLeter svg{
+        width: 10vw;
+        height: 10vh;
+       }
+        .Contate{
+            height: 60vmax;
+            width: 90%;
+            position: absolute;
+            top: 15%;
+        }
+        .ClickProject{
+            width: 15vmax;
+        }
+        .Habilit{
+            width: 90%;
+            height: 35vmax;
+            padding-left: 0%;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 3;
+            margin: 0 auto 0;
+            margin-top: 1%;
+        }
+       .ImgLinguageHtml svg{
+        height: 100%;
+        flex-basis: 0;
+        flex-grow: 0;
+       }
+       .ImgLinguageCss svg{
+        height: 100%;
+        flex-basis: 0;
+        flex-grow: 0;
+       }
+       .ImgLinguageJv svg{
+        height: 100%;
+        flex-basis: 0;
+        flex-grow: 0;
+       }
+       .ImgLinguageHtml, .ImgLinguageJv, .ImgLinguageCss{
+        height: 15vmax;
+       }
+       .html, .jv, .cssHabilit{
+       margin: 0;
+       height: max-content;
+       }
+       }
+
+    </style>
+</head>
+<body onload="MarginCont()" class="Unit">
+   
+        <header class="Styli">
+            <h2>R</h2>
+           <h3>ryan ferrer</h3>
+           <div class="MenDiv">
+            <button class="OpenMenu" onclick=" MenuApres()">
+                <span id="Click"></span>
+                <span id="Click"></span>
+            </button>
+            <lu class="Infor">
+                <li><button onclick="Habylit()">habilidades</button></li>
+                <li><button onclick="BehaviorLeter()">contato</button></li>
+                <li><button onclick="Behavior()">sobre mim</button></li>
+            </lu>
+        </header>
+        </div>
+        <lu class="InforMobile">
+            <li><button onclick="Habylit()">habilidades</button></li>
+            <li><button onclick="BehaviorLeter()">contato</button></li>
+            <li><button onclick="Behavior()">sobre mim</button></li>
+        </lu>
+        <section class="Habilit">
+
+            <div class="cssHabilit">
+                <div class="ImgLinguageCss">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -30 500 560" style="fill:#fdfdfd"><g id="Layer_2" data-name="Layer 2"><g id="css3"><path d="M224.67,512a9.88,9.88,0,0,1-2.7-.37L46.4,462.43a10,10,0,0,1-7.26-8.75L0,10.88A10,10,0,0,1,10,0H439.34a10,10,0,0,1,10,10.88L410.13,453.71a10,10,0,0,1-7.26,8.75l-175.5,49.17A9.88,9.88,0,0,1,224.67,512ZM58.45,445l166.22,46.58,166.15-46.56L428.42,20H20.92Z"/><path d="M224.58,419.76a10.18,10.18,0,0,1-2.68-.36L110.73,388.53a10,10,0,0,1-7.28-8.75l-7.76-87.21a10,10,0,0,1,10-10.89h54.47a10,10,0,0,1,10,9.11l3.42,38.29,51.08,13.83L276,329l6.29-57.46-179.2.49h0a10,10,0,0,1-10-9l-5.4-51.53a10,10,0,0,1,9.83-11.05l191.16-2.26L291.28,163l-199,.56h0a10,10,0,0,1-10-9.32l-3.52-51.32a10,10,0,0,1,10-10.68H360.58a10,10,0,0,1,10,10.89L365.7,157.4,360.77,213,345.86,379.79a10,10,0,0,1-7.29,8.74L227.31,419.38A9.73,9.73,0,0,1,224.58,419.76ZM122.76,371.11l101.82,28.27,102-28.27,14.3-159.87,4.93-55.62h0l3.87-43.38H99.47l2.15,31.29L302,143h0a10,10,0,0,1,10,10.73L308,208.87a10,10,0,0,1-9.85,9.26l-189.37,2.24L112.05,252l181.35-.5h0a10,10,0,0,1,9.94,11.08L295.12,338a10,10,0,0,1-7.34,8.57L227.61,362.8a10,10,0,0,1-5.61.13l-60.45-16.36a10,10,0,0,1-7.34-8.76L151,301.68H116.58ZM335.9,378.9h0Z"/></g></g></svg>
+                </div>
+                <ul>
+                    <li>layout responsivo</li>
+                    <li>box-model</li>
+                    <li>animações css</li>
+                    <li>seletores css</li>
+                    <li>unidades de medidas css</li>
+                    <li>psedeu-classes</li>
+                </ul>
+            </div>
+ 
+            <div class="html">
+                <div class="ImgLinguageHtml">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="5 0 40 50" style="fill:#fdfdfd">
+                    <path d="M 5.28125 2 C 4.765625 2.09375 4.410156 2.574219 4.46875 3.09375 L 8 42.53125 C 8.046875 42.933594 8.332031 43.265625 8.71875 43.375 L 24.71875 47.96875 C 24.902344 48.023438 25.097656 48.023438 25.28125 47.96875 L 41.28125 43.375 C 41.667969 43.265625 41.953125 42.933594 42 42.53125 L 45.53125 3.09375 C 45.558594 2.8125 45.464844 2.535156 45.273438 2.324219 C 45.082031 2.117188 44.8125 2 44.53125 2 L 5.46875 2 C 5.4375 2 5.40625 2 5.375 2 C 5.34375 2 5.3125 2 5.28125 2 Z M 6.5625 4 L 43.4375 4 L 40.09375 41.65625 L 25 45.9375 L 9.90625 41.65625 Z M 12.53125 10.0625 C 12.015625 10.15625 11.660156 10.636719 11.71875 11.15625 L 13.0625 25.9375 C 13.09375 26.453125 13.515625 26.859375 14.03125 26.875 L 30 26.875 L 29.5625 31.46875 L 25.03125 32.4375 L 20.4375 31.46875 L 20.28125 29.84375 C 20.25 29.316406 19.808594 28.90625 19.28125 28.90625 L 14.40625 28.90625 C 14.125 28.90625 13.855469 29.023438 13.664063 29.230469 C 13.472656 29.441406 13.378906 29.71875 13.40625 30 L 13.96875 36.125 C 14 36.527344 14.269531 36.875 14.65625 37 L 24.59375 40.03125 L 24.71875 40.0625 C 24.902344 40.117188 25.097656 40.117188 25.28125 40.0625 L 35.34375 37 C 35.742188 36.886719 36.027344 36.539063 36.0625 36.125 L 37.375 21.09375 C 37.402344 20.816406 37.3125 20.542969 37.128906 20.335938 C 36.945313 20.128906 36.683594 20.007813 36.40625 20 L 19.375 20 L 19.125 16.90625 L 36.84375 16.90625 C 37.363281 16.910156 37.796875 16.515625 37.84375 16 L 38.28125 11.15625 C 38.308594 10.875 38.214844 10.597656 38.023438 10.386719 C 37.832031 10.179688 37.5625 10.0625 37.28125 10.0625 L 12.71875 10.0625 C 12.65625 10.054688 12.59375 10.054688 12.53125 10.0625 Z M 13.8125 12.0625 L 36.1875 12.0625 L 35.9375 14.90625 L 18.03125 14.90625 C 17.75 14.90625 17.480469 15.023438 17.289063 15.230469 C 17.097656 15.441406 17.003906 15.71875 17.03125 16 L 17.5 21.09375 C 17.546875 21.597656 17.964844 21.988281 18.46875 22 L 35.3125 22 L 34.125 35.28125 L 25 38.03125 L 15.875 35.28125 L 15.5 30.90625 L 18.375 30.90625 L 18.5 32.375 C 18.53125 32.816406 18.847656 33.183594 19.28125 33.28125 L 24.84375 34.4375 C 24.976563 34.464844 25.117188 34.464844 25.25 34.4375 L 30.71875 33.28125 C 31.152344 33.183594 31.46875 32.816406 31.5 32.375 L 32.09375 25.9375 C 32.109375 25.660156 32.011719 25.390625 31.824219 25.191406 C 31.632813 24.988281 31.371094 24.875 31.09375 24.875 L 14.9375 24.875 Z"></path>
+                </svg>
+                </div>
+                <ul>
+                    <li>ancoragem de link</li>
+                    <li>inclusão de sites</li>
+                    <li>html semantico</li>
+                    <li>atributos globais</li>
+                    <li>multimidias e incorporações</li>
+                    <li>tipos de inputs</li>
+                </ul>
+            </div>
+ 
+            <div class="jv">
+             <div class="ImgLinguageJv">
+                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"viewBox="0 0 50 50" style="fill:#fdfdfd">
+                     <path d="M 5.4648438 2 A 1.0001 1.0001 0 0 0 4.46875 3.0898438 L 7.9882812 42.515625 A 1.0001 1.0001 0 0 0 8.7089844 43.388672 L 24.71875 47.960938 A 1.0001 1.0001 0 0 0 25.267578 47.960938 L 41.292969 43.388672 A 1.0001 1.0001 0 0 0 42.013672 42.515625 L 45.53125 3.0898438 A 1.0001 1.0001 0 0 0 44.535156 2 L 5.4648438 2 z M 6.5585938 4 L 43.441406 4 L 40.083984 41.654297 L 24.994141 45.960938 L 9.9199219 41.654297 L 6.5585938 4 z M 19 10 A 1.0001 1.0001 0 0 0 18 11 L 18 29.628906 L 12.267578 28.041016 A 1.0001 1.0001 0 0 0 11 29.003906 L 11 33.949219 A 1.0001 1.0001 0 0 0 11.732422 34.912109 L 22.732422 37.962891 A 1.0001 1.0001 0 0 0 24 37 L 24 11 A 1.0001 1.0001 0 0 0 23 10 L 19 10 z M 27 10 A 1.0001 1.0001 0 0 0 26 11 L 26 28 A 1.0001 1.0001 0 0 0 27.169922 28.986328 L 32.917969 27.996094 L 32.798828 29.767578 L 26.734375 31.435547 A 1.0001 1.0001 0 0 0 26 32.398438 L 26 37 A 1.0001 1.0001 0 0 0 27.265625 37.964844 L 37.265625 35.214844 A 1.0001 1.0001 0 0 0 37.996094 34.335938 L 39.050781 22.085938 A 1.0001 1.0001 0 0 0 37.914062 21.009766 L 32 21.847656 L 32 16 L 38.654297 16 A 1.0001 1.0001 0 0 0 39.650391 15.085938 L 39.996094 11.085938 A 1.0001 1.0001 0 0 0 39 10 L 27 10 z M 20 12 L 22 12 L 22 35.685547 L 13 33.189453 L 13 30.318359 L 18.732422 31.908203 A 1.0001 1.0001 0 0 0 20 30.945312 L 20 12 z M 28 12 L 37.910156 12 L 37.736328 14 L 31 14 A 1.0001 1.0001 0 0 0 30 15 L 30 23 A 1.0001 1.0001 0 0 0 31.140625 23.990234 L 36.951172 23.166016 L 36.0625 33.470703 L 28 35.6875 L 28 33.162109 L 34.015625 31.507812 A 1.0001 1.0001 0 0 0 34.748047 30.611328 L 34.998047 26.861328 A 1.0001 1.0001 0 0 0 33.830078 25.808594 L 28 26.8125 L 28 12 z"></path>
+                 </svg>
+             </div>
+             <ul>
+                 <li>funções de callback</li>
+                 <li>logica de programação</li>
+                 <li>metodo switch case</li>
+                 <li>manipulação de array e objetos</li>
+                 <li>manipulação de string e number</li>
+                 <li>armazenamento de dados l/cliente</li>
+             </ul>
+            </div>
+ 
+         </section>
+        <article class="Look">
+            <p>
+                Olá, meu nome é Ryan e eu sou um desenvolvedor de sistemas.
+                Gosto de tecnologia desde criança, sempre fui fascinado
+                pelo que ela faz, e sempre tive a curiosidade de entender
+                como ela funciona. Gosto de construir
+                algo com as minhas próprias mãos e resolver problemas, pois
+                no final a sastifação de observar tudo funcionando sem erro é
+                muito grande. estou a um ano estudando programação com
+                foco nas tecnologias front-end, mas com intenção
+                de aprender tambem as tecnologias do back-end e
+                me tornar um desenvolvedor full-stack.
+            </p>
+     </article>
+       
+     <section class="BehavioLeter">
+        <ul>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50" style="fill:#fdfdfd;">
+                <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
+                </svg>
+                <a href='https://www.instagram.com/p/Ce98flwOLZ9/?igshid=MzRlODBiNWFlZA==' target="_blank">ryan_ferrer__</a>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
+                     style="fill:#fdfdfd;">
+                    <path d="M 8 3.0097656 C 4.53 3.0097656 2.0097656 5.0892187 2.0097656 7.9492188 C 2.0097656 10.819219 4.59 12.990234 8 12.990234 C 11.47 12.990234 13.990234 10.870625 13.990234 7.890625 C 13.830234 5.020625 11.36 3.0097656 8 3.0097656 z M 3 15 C 2.45 15 2 15.45 2 16 L 2 45 C 2 45.55 2.45 46 3 46 L 13 46 C 13.55 46 14 45.55 14 45 L 14 16 C 14 15.45 13.55 15 13 15 L 3 15 z M 18 15 C 17.45 15 17 15.45 17 16 L 17 45 C 17 45.55 17.45 46 18 46 L 27 46 C 27.552 46 28 45.552 28 45 L 28 30 L 28 29.75 L 28 29.5 C 28 27.13 29.820625 25.199531 32.140625 25.019531 C 32.260625 24.999531 32.38 25 32.5 25 C 32.62 25 32.739375 24.999531 32.859375 25.019531 C 35.179375 25.199531 37 27.13 37 29.5 L 37 45 C 37 45.552 37.448 46 38 46 L 47 46 C 47.55 46 48 45.55 48 45 L 48 28 C 48 21.53 44.529063 15 36.789062 15 C 33.269062 15 30.61 16.360234 29 17.490234 L 29 16 C 29 15.45 28.55 15 28 15 L 18 15 z"></path>
+                </svg>
+                <a href="https://www.linkedin.com/in/ryan-ferreira-924834253">ryan ferreira</a>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
+                     style="fill:#ffffff;">
+                    <path d="M 25 2 C 12.311335 2 2 12.311335 2 25 C 2 37.688665 12.311335 48 25 48 C 37.688665 48 48 37.688665 48 25 C 48 12.311335 37.688665 2 25 2 z M 25 4 C 36.607335 4 46 13.392665 46 25 C 46 25.071371 45.994849 25.141688 45.994141 25.212891 C 45.354527 25.153853 44.615508 25.097776 43.675781 25.064453 C 42.347063 25.017336 40.672259 25.030987 38.773438 25.125 C 38.843852 24.634651 38.893205 24.137377 38.894531 23.626953 C 38.991361 21.754332 38.362521 20.002464 37.339844 18.455078 C 37.586913 17.601352 37.876747 16.515218 37.949219 15.283203 C 38.031819 13.878925 37.910599 12.321765 36.783203 11.269531 L 36.494141 11 L 36.099609 11 C 33.416539 11 31.580023 12.12321 30.457031 13.013672 C 28.835529 12.386022 27.01222 12 25 12 C 22.976367 12 21.135525 12.391416 19.447266 13.017578 C 18.324911 12.126691 16.486785 11 13.800781 11 L 13.408203 11 L 13.119141 11.267578 C 12.020956 12.287321 11.919778 13.801759 11.988281 15.199219 C 12.048691 16.431506 12.321732 17.552142 12.564453 18.447266 C 11.524489 20.02486 10.900391 21.822018 10.900391 23.599609 C 10.900391 24.111237 10.947969 24.610071 11.017578 25.101562 C 9.2118173 25.017808 7.6020996 25.001668 6.3242188 25.046875 C 5.3845143 25.080118 4.6454422 25.135713 4.0058594 25.195312 C 4.0052628 25.129972 4 25.065482 4 25 C 4 13.392665 13.392665 4 25 4 z M 14.396484 13.130859 C 16.414067 13.322043 17.931995 14.222972 18.634766 14.847656 L 19.103516 15.261719 L 19.681641 15.025391 C 21.263092 14.374205 23.026984 14 25 14 C 26.973016 14 28.737393 14.376076 30.199219 15.015625 L 30.785156 15.273438 L 31.263672 14.847656 C 31.966683 14.222758 33.487184 13.321554 35.505859 13.130859 C 35.774256 13.575841 36.007486 14.208668 35.951172 15.166016 C 35.883772 16.311737 35.577304 17.559658 35.345703 18.300781 L 35.195312 18.783203 L 35.494141 19.191406 C 36.483616 20.540691 36.988121 22.000937 36.902344 23.544922 L 36.900391 23.572266 L 36.900391 23.599609 C 36.900391 26.095064 36.00178 28.092339 34.087891 29.572266 C 32.174048 31.052199 29.152663 32 24.900391 32 C 20.648118 32 17.624827 31.052192 15.710938 29.572266 C 13.797047 28.092339 12.900391 26.095064 12.900391 23.599609 C 12.900391 22.134903 13.429308 20.523599 14.40625 19.191406 L 14.699219 18.792969 L 14.558594 18.318359 C 14.326866 17.530484 14.042825 16.254103 13.986328 15.101562 C 13.939338 14.14294 14.166221 13.537027 14.396484 13.130859 z M 8.8847656 26.021484 C 9.5914575 26.03051 10.40146 26.068656 11.212891 26.109375 C 11.290419 26.421172 11.378822 26.727898 11.486328 27.027344 C 8.178972 27.097092 5.7047309 27.429674 4.1796875 27.714844 C 4.1152068 27.214494 4.0638483 26.710021 4.0351562 26.199219 C 5.1622058 26.092262 6.7509972 25.994233 8.8847656 26.021484 z M 41.115234 26.037109 C 43.247527 26.010033 44.835728 26.108156 45.962891 26.214844 C 45.934234 26.718328 45.883749 27.215664 45.820312 27.708984 C 44.24077 27.41921 41.699674 27.086688 38.306641 27.033203 C 38.411945 26.739677 38.499627 26.438219 38.576172 26.132812 C 39.471291 26.084833 40.344564 26.046896 41.115234 26.037109 z M 11.912109 28.019531 C 12.508849 29.215327 13.361516 30.283019 14.488281 31.154297 C 16.028825 32.345531 18.031623 33.177838 20.476562 33.623047 C 20.156699 33.951698 19.86578 34.312595 19.607422 34.693359 L 19.546875 34.640625 C 19.552375 34.634325 19.04975 34.885878 18.298828 34.953125 C 17.547906 35.020374 16.621615 35 15.800781 35 C 14.575781 35 14.03621 34.42121 13.173828 33.367188 C 12.696283 32.72356 12.114101 32.202331 11.548828 31.806641 C 10.970021 31.401475 10.476259 31.115509 9.8652344 31.013672 L 9.7832031 31 L 9.6992188 31 C 9.2325521 31 8.7809835 31.03379 8.359375 31.515625 C 8.1485707 31.756544 8.003277 32.202561 8.0976562 32.580078 C 8.1920352 32.957595 8.4308563 33.189581 8.6445312 33.332031 C 10.011254 34.24318 10.252795 36.046511 11.109375 37.650391 C 11.909298 39.244315 13.635662 40 15.400391 40 L 18 40 L 18 44.802734 C 10.967811 42.320535 5.6646795 36.204613 4.3320312 28.703125 C 5.8629338 28.414776 8.4265387 28.068108 11.912109 28.019531 z M 37.882812 28.027344 C 41.445538 28.05784 44.08105 28.404061 45.669922 28.697266 C 44.339047 36.201504 39.034072 42.31987 32 44.802734 L 32 39.599609 C 32 38.015041 31.479642 36.267712 30.574219 34.810547 C 30.299322 34.368135 29.975945 33.949736 29.615234 33.574219 C 31.930453 33.11684 33.832364 32.298821 35.3125 31.154297 C 36.436824 30.284907 37.287588 29.220424 37.882812 28.027344 z M 23.699219 34.099609 L 26.5 34.099609 C 27.312821 34.099609 28.180423 34.7474 28.875 35.865234 C 29.569577 36.983069 30 38.484177 30 39.599609 L 30 45.398438 C 28.397408 45.789234 26.72379 46 25 46 C 23.27621 46 21.602592 45.789234 20 45.398438 L 20 39.599609 C 20 38.508869 20.467828 37.011307 21.208984 35.888672 C 21.950141 34.766037 22.886398 34.099609 23.699219 34.099609 z M 12.308594 35.28125 C 13.174368 36.179258 14.222525 37 15.800781 37 C 16.579948 37 17.552484 37.028073 18.476562 36.945312 C 18.479848 36.945018 18.483042 36.943654 18.486328 36.943359 C 18.36458 37.293361 18.273744 37.645529 18.197266 38 L 15.400391 38 C 14.167057 38 13.29577 37.55443 12.894531 36.751953 L 12.886719 36.738281 L 12.880859 36.726562 C 12.716457 36.421191 12.500645 35.81059 12.308594 35.28125 z"></path>
+                </svg>
+                <a href="https://github.com/ryandsferrer">ryan-ds-ferrer</a>
+            </li>
+        </ul>
+    </section>
+     <div class="Contate">
+        <h1>welcome</h1>
+        <h2>Hey, My name is Ryan, front-end web developer</h2>
+        <a class="ClickProject" href="/Projetos/index.html" target="_blank">project</a>
+     </div>
+     <span class="MagImg"></span>
+</body>
+</html>

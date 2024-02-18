@@ -1,0 +1,133 @@
+html, body{
+    height: 100%;
+}
+
+.MoldBack{
+    margin: 0;
+    padding: 0;
+    background-image: url('imagensDay/Bom-dia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1.5s;
+    font-size: 62%;
+}
+label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23vmax;
+    height: 5vmax;
+}
+.UsName p{
+    color: white;
+    font-size: clamp(1rem, 1vmax, 2rem);
+    font-family: sans-serif;
+    font-variant: small-caps;
+}
+img{
+    position: relative;
+    bottom: 25%;
+}
+.Prime{
+    width: 40vmax;
+    height: 7vmax;
+    margin: 0 auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 1px rgb(111, 111, 111);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top: none;
+    padding-left: 3%;
+}
+.Titlle{
+    font-family: sans-serif;
+    font-size: clamp(1rem, 2.5vmax, 3rem);
+    letter-spacing: 2px;
+    margin: 0%;
+    width: 100%;
+    text-align: center;
+    height: max-content;
+    text-transform: uppercase;
+    color: white;
+}
+.Imag{
+    width: 4.5vmax;
+}
+.UsName{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.Infor{
+    margin: 13% auto 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 50vmax;
+    height: 10vmax;
+    padding: 0%;
+}
+
+li{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+}
+
+.Selmot, .Selhors, .Selmint, .Selsec{
+    font-family: sans-serif;
+    font-size: clamp(2rem, 4vmax, 8rem);
+    margin: 0%;
+    color: rgb(255, 255, 255);
+    transition: 2s;
+}
+
+li p{
+    font-size: clamp(1rem, 1vmax, 4rem);
+    font-family: sans-serif;
+    font-variant: small-caps;
+    color: white;
+    margin: 0%;
+}
+
+@media (max-width: 550px) {
+    .MoldBack{
+        background-size: cover;
+        background-image: url('imagensDay/Bom-dia-fotor-mobile.jpg');
+    }
+    .Prime{
+        width: 45vmax;
+    }
+    .Titlle{
+        letter-spacing: 1px;
+    }
+    .UsName p{
+        margin: 0;
+    }
+    .UsName{
+        padding-bottom: 6%;
+    }
+    .Infor{
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .MoldBack{
+        background-position-x: 50%;
+        background-size: 300%;
+    }
+    .Infor{
+        margin: 45% auto 0;
+    }
+}

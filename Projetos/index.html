@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pasta de projetos</title>
+    <script src="project.js"></script>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+        html{
+            min-height: 100vh;
+        }
+        body{
+            background-color: black;
+            min-height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+        }
+        header{
+            width: 6.5vmax;
+            height: 100vh;
+            box-shadow: 0px 0px 10px rgb(158, 1, 248);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 1;
+        }
+        h1{
+            color: rgb(255, 255, 255);
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(.3rem, 2.5vw, 1.0rem);
+            text-transform: uppercase;
+            transform: rotateZ(-90deg);
+            letter-spacing: 8px;
+            width: max-content;
+            flex-basis: 1;
+        }
+        li{
+            width: 100%;
+            height: max-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+            flex-basis: 1;
+        }
+        article{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 30vw;
+            height: 100%;
+            flex-basis: 1;
+        }
+        img{
+            width: 25vw;
+            height: 100%;
+            flex-basis: 1;
+        }
+        img:hover{
+           opacity: .5;
+        }
+        h2{
+            color: rgb(255, 0, 153);
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(.3rem, 2.5vw, 1.0rem);
+            text-transform: uppercase;
+        }
+        p{
+            color: white;
+            font-family: 'Mukta', sans-serif;
+            font-size: clamp(.2rem, 2.5vw, .9rem);
+            text-transform: uppercase;
+            flex-basis: 1;
+            width: 100%;
+        }
+        strong{
+            color:rgb(108, 1, 248);
+            text-shadow: 0px 0px 15px rgb(162, 0, 255);
+        }
+        /*estilização das class*/
+        .Project{
+            width: 100%;
+            margin: 2% auto 2%;
+            height: 93vh;
+            flex-basis: 0;
+        }
+        /*estilização dos elementos*/
+        .Temp{
+            margin: .5% auto .5%;
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            overflow-Y: scroll;
+            flex-direction: column;
+            border-radius: 10px;
+            gap: 3%;
+            flex-basis: 0;
+            scroll-behavior: smooth;
+        }
+        /*Construend*/
+        .Constru{
+            content: '';
+            width: 25vw;
+            height: 40vh;
+            border: solid 1px blueviolet;
+        }
+      /*versão mobile*/
+      @media (max-width: 900px) {
+        body{
+            flex-direction: column;
+            position: relative;
+        }
+        html{
+            height: max-content;
+        }
+        header{
+            width: 100%;
+            height: 9vmax;
+        }
+        h1{
+            transform: rotateZ(0deg);
+        }
+        article{
+            width: 80vw;
+            height: 20vh;
+            gap: 10%;
+        }
+        li{
+            width: 100%;
+            flex-direction: column;
+        }
+        p{
+            width: 100%;
+        }
+        img{
+            width: 40vw;
+        }
+        .Project{
+            width: 100%;
+            max-height: 100%;
+            padding-top: 25%;
+        }
+        .Temp{
+            width: 100%;
+            height: max-content;
+            margin: 0%;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .Constru{
+            height: 20vh;
+            width: 50vw;
+        }
+        
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>projetos web</h1>
+    </header>
+        <div class="Project">
+            <ul class="Temp">
+                <li>
+                    <a href="projeto-monitoramento/index.html"><img src="mobile (3).png" alt="relogio digital"></a>
+                    <article>
+                        <H2>relogio digital</H2>
+                        <p>pagina construida com javascript puro, html e css
+                        usando técnicas de manipulação de tempo com <strong>DATE METHODS.</strong>
+                        Foi ultilizado<strong>métodos de array</strong> para verificação de elementos
+                        e modicações na folha de estilo, além de ultilizar o método de <strong>retorno
+                        de dados</strong> para passar um determinado resultado para outras funções
+                        </p>
+                    </article>
+                </li>
+
+                <li>
+                    <a href="/Projetos/intro-component-with-signup-form-master/intro-component-with-signup-form-master/index.html"><img src="cadresPage.png" alt="pagina de cadastro"></a>
+                    <article>
+                        <H2>pagina de cadastro</H2>
+                        <p>pagina construida com javascript puro e css responsivo
+                        usando tectnica de <strong>callback</strong>
+                        para <strong>validação dos dados do usuario
+                        manipulando e verificando dados do tipo string</strong>
+                        </p>
+                    </article>
+                </li>
+                
+                <li>
+                    <a href="/Projetos/newsletter-sign-up-with-success-message-main/newsletter-sign-up-with-success-message-main/index.html"><img src="loginPage.png" alt="pagina de login"></a>
+                    <article>
+                        <H2>pagina de cadastro</H2>
+                        <p>pagina construida com javascript puro e css responsivo.
+                           usando tecnicas<strong>verificação de dados do tipo string</strong>
+                        e <strong>manipulação do documento html usando javascript</strong>
+                        </p>
+                    </article>
+                </li>
+                <li>
+                    <a href="lading page/intro-section-with-dropdown-navigation-main/index.html"><img src="ladingP-grid.png" alt="pagina de login"></a>
+                    <article>
+                        <H2>Seção de introdução com navegação suspensa</H2>
+                        <p>pagina construida com javascript puro e css responsivo.
+                           Foi ultilizado <strong>css grid para posicionar elementos em duas
+                            dimensões diferentes(linha coluna)</strong>
+                         e no js foi ultilizado tecnicas de manipulação concentrada
+                         na interação da pagina como:<strong> menu responsivo, mouseEvent
+                         e verificação de valores ultilizando switch-case.
+                         </strong>
+                    </article>
+                </li>
+            </ul>
+        </div>
+</body>
+</html>

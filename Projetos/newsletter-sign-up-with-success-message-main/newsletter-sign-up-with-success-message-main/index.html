@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+    body{
+      margin: 0%;
+      padding: 0%;
+      background-color: rgb(42, 46, 96);
+      font-size: 62.5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h1{
+      font-family: 'Roboto', sans-serif;
+      font-size: clamp(1.0rem, 18vh, 2.5rem);
+      margin-top: -3%;
+      text-align: center;
+    }
+    /* id do paragrafo*/
+    #Noc1{
+      display: flex;
+      font-family: 'Roboto', sans-serif;
+      font-size: clamp(.5rem, 10vh, .9rem);
+    }
+    #Noc2{
+      display: flex;
+      font-family: 'Roboto', sans-serif;
+      font-size: clamp(.5rem, 15vh, .8rem);
+      color: orangered;
+      opacity: 0;
+      margin: 0;
+    }
+    ul{
+      padding: 0%;
+      flex-basis: 1;
+    }
+    li{
+      list-style: none;
+      font-family: 'Roboto', sans-serif;
+      font-size: clamp(.5rem, 10vh, .9rem);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-basis: 1;
+    }
+    strong{
+      font-family: 'Roboto', sans-serif;
+      font-size: clamp(.5rem, 25vh, .7rem);
+      height: max-content;
+    }
+    .Doc{
+      height: 1.5rem;
+      border: none;
+      border: solid 1px rgba(138, 138, 138, 0.58);
+      border-radius: 5px;
+      outline: none;
+      padding-left: 10px;
+      background-color: rgba(235, 6, 6, 0);
+      margin-bottom: 1%;
+      margin-top: 2%;
+    }
+    button{
+      border: none;
+      height: 3rem;
+      font-size: clamp(.5rem, .8rem, 1.0rem);
+      font-family: 'Roboto', sans-serif;
+      background-color: rgb(42, 46, 96);
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: .3s;
+      flex-basis: 1;
+    }
+    button:hover{
+      background-image: linear-gradient(to left ,rgb(254, 125, 65) 10%, rgb(246, 84, 106) , rgb(251, 57, 103) );
+      box-shadow: 1px 8px 30px rgb(246, 84, 106);
+    }
+    .attribution { 
+      font-size: 11px; text-align: center;
+    }
+    .attribution a { 
+      color: hsl(228, 45%, 44%); 
+    }
+    /*estilização das class*/
+    .contain{
+      width: 57vw;
+      height: 85ch;
+      margin: 2% auto 2%;
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 15px;
+      padding: 20px;
+      gap: 3%;
+      flex-basis: 1;
+    }
+    .Unit{
+      width: 26vw;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-basis: 1;
+    }
+    .EmailUnit{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: max-content;
+      justify-content: space-between;
+      align-items: center;
+      flex-basis: 1;
+    }
+    /*modificar a span*/
+    .Man{
+      content: '';
+      background-image: url(illustration-sign-up-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-x: right;
+      border-radius: 10px;
+      width: 49%;
+      height: 100%;
+      display: flex;
+      flex-shrink: 1;
+    }
+    .Insert{
+      display: flex;
+    }
+    .Magsuces{
+      display: none;
+      width: 5vw;
+    }
+
+    
+    @media (max-width: 768px) {
+      body{
+       background-color: white;
+      }
+      h1{
+        margin: 0;
+        text-align: left;
+      }
+      .contain{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        flex-direction: column-reverse;
+        margin: 0;
+      }
+      .Unit{
+          width: 80vw;
+          height: 78ch;
+        }
+        .Man{
+          width: 100%;
+          height: 50ch;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-image: url(illustration-sign-up-mobile.svg);
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+        }
+        .Magsuces{
+             display: none;
+             width: 15vw;
+             }
+    }
+  </style>
+</head>
+<body>
+<script src="index.js"></script>
+  <!-- Sign-up form start -->
+
+  <div class="contain">
+   <article class="Unit">
+    <img class='Magsuces' src="icon-success.svg">
+    <h1 class="TextMold">Stay updated!</h1>
+
+     <p id="Noc1">Join 60,000+ product managers receiving monthly updates on:</p>
+    <ul class="Listener">
+      <li><img src="icon-list.svg" width="13" alt="">Product discovery and building what matters</li>
+      <li><img src="icon-list.svg" width="13" alt="">Measuring to ensure updates are a success</li>
+      <li><img src="icon-list.svg" width="13" alt="">And much more!</li>
+    </ul>
+     <div class="EmailUnit"><strong id="Nig">email address</strong><p id="Noc2">valid email required</p></div>
+     <input type="email" placeholder="email@company.com" class="Doc">
+     <button class="MessaPased" onclick="Devop(MolderStile)"> Subscribe to monthly newsletter</button>
+   </article>
+   <span class="Man"></span>
+  </div>
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <!-- Success message end -->
+  
+  <fotter class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/ryandsferrer">ryandsferrer</a>.
+  </fotter>
+</body>
+</html>

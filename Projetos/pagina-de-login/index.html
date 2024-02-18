@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="index.js"></script>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            font-size: 62.5%;
+            background-image: url(https://wallpapercave.com/wp/wp10566841.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        html{
+            height: 100%;
+        }
+        .scop{
+            content: '';
+            width: 30vw;
+            height: 20%;
+            background-color: rgba(255, 255, 255, 0.103);
+            border-radius: 5%;
+            margin: 10% auto 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1%;
+            transform: rotateY(0deg);
+        }
+        .reverscop{
+            content: '';
+            width: 30vw;
+            height: 90%;
+            border-radius: 5%;
+            margin: 10% auto 10%;
+            background-color: rgba(255, 255, 255, 0.103);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1%;
+            transform: rotateY(160deg);
+            transition: 3s;
+        }
+        .email{
+            height: 50%;
+            width: 15vw;
+            background-color: rgba(244, 247, 247, 0);
+            border: none;
+            border-bottom: solid 1px rgba(0, 0, 0, 0.432);
+        }
+        .email:focus{
+            outline: none;
+        }
+        .createmail{
+            height: 50%;
+            width: 100%;
+            background-color: rgba(244, 247, 247, 0);
+            border: none;
+            border-bottom: solid 1px rgba(0, 0, 0, 0.432);
+        }
+        .createmail:focus{
+            outline: none;
+        }
+        .password{
+            height: 50%;
+            width: 15vw;
+            background-color: rgba(244, 247, 247, 0);
+            border: none;
+            border-bottom: solid 1px rgba(0, 0, 0, 0.432);
+        }
+        .password:focus{
+            outline: none;
+        }
+        .creatpassword{
+            height: 50%;
+            width: 100%;
+            background-color: rgba(244, 247, 247, 0);
+            border: none;
+            border-bottom: solid 1px rgba(0, 0, 0, 0.432);
+        }
+        .creatpassword:focus{
+            outline: none;
+        }
+        p{
+            font-size: 1.5em;
+            margin: 0%;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            letter-spacing: 5px;
+            color:rgb(255, 255, 255);
+        }
+        label{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 3px;
+        }
+        
+        .cotex{
+            transform: rotateY(0deg);
+            font-family: 'Cabin', sans-serif;
+            font-size: 5em;
+            letter-spacing: 20px;
+            text-align: center;
+            color:rgb(213, 4, 255);
+            text-shadow: 1px 2px 3px rgb(213, 4, 255);
+        }
+        .remov{
+            transform: rotateY(-160deg);
+            font-family: 'Cabin', sans-serif;
+            font-size: 3em;
+            letter-spacing: 10px;
+            color:rgb(255, 0, 255);
+            text-shadow: 1px 2px 3px rgb(213, 4, 255);
+            transition: 3s;
+        }
+        .rocks{
+            border: none;
+            border-radius: 5px;
+            width: 7vw;
+            height: 2em;
+            background-color: rgba(255, 0, 242, 0);
+            font-size: 1.5em;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 1.4em;
+            cursor: pointer;
+        }
+        .rocks:hover{
+            box-shadow: 0px 0px 3px rgb(213, 4, 255);
+        }
+        .criar{
+            border: none;
+            border-radius: 5px;
+            width: 7vw;
+            height: 2em;
+            background-color: rgba(255, 0, 242, 0);
+            font-size: 1.5em;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 1.4em;
+            transition: 2s;
+        }
+        .criar:hover{
+            box-shadow: 0px 0px 3px rgb(213, 4, 255);
+        }
+        .creat{
+            border: none;
+            border-radius: 5px;
+            width: 10vw;
+            height: 2em;
+            background-color: rgb(255, 0, 242, 0.637);
+            font-size: 1.5em;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            transform: rotateY(-160deg);
+            display: none;
+        }
+        .loger{
+            border: none;
+            border-radius: 5px;
+            width: 10vw;
+            height: 5vh;
+            background-color: rgb(255, 0, 242, 0.637);
+            font-size: 1.5em;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            display: none;
+        }
+        
+        .respos{
+            transform: rotateY(-30deg);
+            opacity: 0;
+            color: rgb(255, 4, 255);
+        }
+        .cadrest{
+            width: max-content;
+            height: 5.5em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+        }
+        .speri{
+            width: max-content;
+            height: 5.5em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            opacity: 0;
+        }
+        .rist{
+            width: max-content;
+            height: 10em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            transform: rotateY(-160deg);
+            transition: 3s;
+            opacity: 1;
+        }
+        .button{
+            width: 100%;
+            display: flex;
+            justify-content: space-around; 
+        }
+        #text{
+            font-size: 1.8em;
+            text-align: center;
+            text-transform: uppercase;
+            opacity: 1;
+            color:rgb(255, 255, 255);
+            font-family: 'Cabin', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="scop" class="reverscop">
+        <header>
+            <H1 class="cotex" class="remov">welcome</H1>
+        </header>
+        <p id="text">o que voce gostaria de fazer?</p>
+        <span class="cadrest">
+            <label><p>email</p><input class="createmail" type="text" placeholder="email"></label>
+            <label><p>senha</p><input class="creatpassword" type="password" placeholder="password"></label>
+        </span>
+        <span class="speri" class="rist">
+            <label><p>email</p><input class="email" type="text" placeholder="email"></label>
+            <label><p>senha</p><input class="password" type="password" placeholder="password"></label>
+            <p class="respos">senha incorreta</p>
+        </span>
+        <div class="button">
+            <button class="rocks" onclick="docangle()">continuar</button>
+            <button class="criar" onclick="newDefoo()">criar conta</button>
+            <button class="creat" onclick="newcadrest()">criar conta</button>
+        </div>
+        <button class="loger" onclick="action()">login</button>
+    </div>
+</body>
+</html>

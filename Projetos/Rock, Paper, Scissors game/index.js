@@ -10,9 +10,8 @@ function startgame(){
             
     let choice= event.target
     let capback= window.getComputedStyle(choice)
-    let trchoice= capback.getPropertyValue('background-image').replace('url("http://127.0.0.1:5500/rock-paper-scissors-master/', "").replace('")', '')
+    let trchoice= capback.getPropertyValue('background-image').replace('url("http://127.0.0.1:5501/Projetos/Rock,%20Paper,%20Scissors%20game/', "").replace('")', '')
         mychoice.style.backgroundImage= `url(${trchoice})`
-
 
     choicedesk(trchoice)
 

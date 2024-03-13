@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      margin: 0%;
+      padding: 0%;
+      background-image: url(/intro-component-with-signup-form-master/images/bg-intro-desktop.png);
+      background-color: rgba(255, 111, 111, 0.856);
+      font-size: 62.5%;
+    }
+    /*estilização das tags*/
+    header{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 35vw;
+      height: 55ch;
+    }
+    h1{
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      font-size: 2.8rem;
+    }
+    header p{
+      font-family: sans-serif;
+      color: white;
+      font-size: .9rem;
+      margin: 0%;
+    }
+    li{
+      list-style: none;
+    }
+    label{
+      text-align: end;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      color: rgb(248, 104, 104);
+      margin-bottom: 3%;
+      margin-top: 1%;
+      opacity: 0;
+    }
+    /*estilização das class*/
+    .Container{
+      width: 100%;
+      height: 120ch;;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0% auto 0%;
+      align-items: center;
+      gap: 3%;
+    }
+    .InformList{
+      width: max-content;
+      height: 47ch;
+      padding: 0%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /*class a ul*/
+    .UnitNav{
+      display: flex;
+      flex-direction: column;
+      height: 110ch;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    /*classe do'article'*/
+    .DateInform{
+      background-color: white;
+      width: 35vw;
+      height: 90ch;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: 1px 5px 3px rgba(71, 71, 71, 0.651);
+    }
+    .DateInform p{
+      font-family: sans-serif;
+      font-size: .7rem;
+      font-weight: bold;
+      color: rgb(134, 132, 132);
+      margin-top: 3%;
+      text-align: center;
+    }
+    .DateInform p strong{
+      color:rgba(255, 111, 111, 0.856);
+    }
+    /*estilização dos botões*/
+    #ClickProm{
+      background-color: rgb(98, 77, 190);
+      border: none;
+      color: white;
+      height: 7ch;
+      width: 30vw;
+      border-radius: 5px;
+      font-family: sans-serif;
+      font-weight: lighter;
+      cursor: pointer;
+      transition: .2s;
+    }
+    #ClickProm:hover{
+      box-shadow: 1px 2px 3px rgba(71, 71, 71, 0.651);
+    }
+    #ClickProm strong{
+      font-family: 'Poppins', sans-serif;
+    }
+    #ClickConf{
+      border: none;
+      width: 30.5vw;
+      height: 6ch;
+      border-radius: 5px;
+      background-color: rgb(20, 209, 137);
+      margin-top: 12%;
+      font-family: sans-serif;
+      font-weight: lighter;
+      color: white;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .2s;
+    }
+    #ClickConf:hover{
+      box-shadow: 1px 2px 3px rgba(71, 71, 71, 0.651);
+    }
+    /*estilização dos inputs*/
+    .Clickname, .ClickLast, .ClickAdress, .ClickPassword{
+      border: none;
+      outline: none;
+      border: solid 1px;
+      border-radius: 5px;
+      border-color: rgb(94, 92, 92);
+      height: 5ch;
+      width: 30vw;
+      text-indent: 4%;
+      font-family: 'Poppins', sans-serif;
+      font-size: .8rem;
+      font-weight: lighter;
+      background-image: url('');
+      background-repeat: no-repeat;
+      background-position: right;
+      background-position-x: 98%;
+    }
+    /*resposivisdade*/
+    @media (max-width: 440px) {
+      .Container{
+        height: 100%;
+        flex-direction: column;
+      }
+      body{
+        background-image: url(images/bg-intro-mobile.png);
+      }
+      h1{
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      header{
+        width: 60vw;
+      }
+      header p{
+        width: 65vw;
+        text-align: center;
+      }
+      .Clickname, .ClickLast, .ClickAdress, .ClickPassword{
+        width: 100%;
+      }
+      #ClickProm strong{
+        margin: 0%;
+      }
+      #ClickProm{
+        width: 85vw;
+        height: 10ch;
+        text-align: center;
+        padding: 8%;
+        font-size: 1.1rem;
+        border-radius: 10px;
+      }
+      #ClickConf{
+        width: 71vw;
+      }
+      .UnitNav{
+        width: 100%;
+      }
+      .DateInform{
+        width: 85vw;
+        height: 78ch;
+      }
+      .DateInform p{
+        width: 80vw;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <script src="index.js"></script>
+
+  <div class="Container">
+    <header>
+
+      <h1>Learn to code by watching others</h1>
+  
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable.</p>
+  
+    </header>
+  
+    <article class="UnitNav">
+  
+        <button id="ClickProm"><strong>Try it free 7 days</strong> then $20/mo. thereafter</button>
+  
+        <nav class="DateInform">
+                <ul class="InformList">
+                  <li><input type="text" placeholder="First Name" class="Clickname"></li>
+
+                  <label for="Clicknam"  class="Nicknam">First name cannot be empyt</label>
+
+                  <li><input type="text" placeholder="Last Name" class="ClickLast"></li>
+
+                  <label for="ClickLast" class="NickLast">Last name cannot be empyt</label>
+
+                  <li><input type="email" placeholder="Email Address" class="ClickAdress"></li>
+
+                  <label for="ClickAndress" class="NickAdress">Looks like this is not an email</label>
+
+                  <li><input type="password" placeholder="Password" class="ClickPassword"></li>
+
+                  <label for="ClickPassword" class="NickPassword">Password cannot be empyt</label>
+                </ul>
+              
+                <button id="ClickConf" onclick="DatesConf()">Claim your free trial</button>
+              
+                <p>By clicking the button, you are agreeing to our <strong>Terms and Services</strong></p>
+         </nav>
+  
+    </article>
+
+  </div>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>

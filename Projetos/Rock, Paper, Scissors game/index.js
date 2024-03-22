@@ -29,15 +29,15 @@ function choicedesk(primeElem){
      switch (true) {
         case (primeElem=== elemenpos[2] && toelement.style.backgroundImage=== 'url("images/icon-scissors.svg")'):
               result++
-              obj.soma(result)
+              Restchoice.soma(result)
             break;
         case (primeElem=== elemenpos[1] && toelement.style.backgroundImage=== 'url("images/icon-rock.svg")'):
               result++
-              obj.soma(result)
+              Restchoice.soma(result)
                 break;
         case (primeElem=== elemenpos[0] && toelement.style.backgroundImage=== 'url("images/icon-paper.svg")'):
               result++
-              obj.soma(result)
+              Restchoice.soma(result)
         default:
             break;
     }

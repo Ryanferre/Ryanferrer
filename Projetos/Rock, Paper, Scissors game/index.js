@@ -29,42 +29,45 @@ function choicedesk(primeElem){
      switch (true) {
         case (primeElem=== elemenpos[2] && toelement.style.backgroundImage=== 'url("images/icon-scissors.svg")'):
               result++
-              Restchoice.soma(result)
+              obg.soma(result)
             break;
         case (primeElem=== elemenpos[1] && toelement.style.backgroundImage=== 'url("images/icon-rock.svg")'):
               result++
-              Restchoice.soma(result)
+              obg.soma(result)
                 break;
         case (primeElem=== elemenpos[0] && toelement.style.backgroundImage=== 'url("images/icon-paper.svg")'):
               result++
-              Restchoice.soma(result)
+              obg.soma(result)
         default:
             break;
     }
-    Restchoice.implent()
-    Restchoice.lostWin(result)
-}
-class obg{
-  result
-  soma
-  implent
-  lostWin
+    obg.implement()
+    obg.lostWin(result)
 }
 
-let Restchoice= new obg()
 
-Restchoice.result= 0;
-Restchoice.soma= function(res){
-                     this.result+=res
-                 };
-Restchoice.implent= function(rest){
-                        let phrase= document.querySelector('.titlegame')
-                        if(rest!=0){
-                           phrase.textContent= 'you win'
-                        }else{
-                           phrase.textContent= 'you lose'
-                        }
-                    }
+const obg = {
+  result: 0,
+
+  soma: function(res) {
+    this.result += res;
+  },
+
+  implement: function() {
+    let numtab = document.querySelector('.tablenumber');
+    numtab.textContent = this.result;
+  },
+  
+  lostWin: function(rest) {
+    let phrase = document.querySelector('.titlegame');
+    if (rest != 0) {
+      phrase.textContent= 'you win';
+    } else {
+      phrase.textContent= 'you lose';
+    }
+  }
+}
+
 
 function returngame(){
     const modStyle= [document.querySelector('.items'), document.querySelector('.game'), document.querySelector('.titleitems')]

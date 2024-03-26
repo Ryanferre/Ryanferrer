@@ -1,19 +1,19 @@
 function startgame(){
-    let toItems= [document.querySelector('.items'), document.querySelector('.game'), document.querySelector('.titleitems')]
-    const mychoice= document.querySelector('.ResultYou')
+    let visibleInvisible= [document.querySelector('.items'), document.querySelector('.game'), document.querySelector('.titleitems')]
+    const myElement= document.querySelector('.ResultYou')
 
-    if(toItems[0].style.display!= 'none' && toItems[1].style.display!= 'flex' && toItems[2].style.display!= 'none'){
-         toItems[0].style.display= 'none'
-         toItems[1].style.display= 'flex'
-         toItems[2].style.display= 'none'
+    if(visibleInvisible[0].style.display!= 'none' && visibleInvisible[1].style.display!= 'flex' && visibleInvisible[2].style.display!= 'none'){
+         visibleInvisible[0].style.display= 'none'
+         visibleInvisible[1].style.display= 'flex'
+         visibleInvisible[2].style.display= 'none'
     }
             
-    let choice= event.target
-    let capback= window.getComputedStyle(choice)
-    let trchoice= capback.getPropertyValue('background-image').replace('url("http://127.0.0.1:5501/Projetos/Rock,%20Paper,%20Scissors%20game/', "").replace('")', '')
-        mychoice.style.backgroundImage= `url(${trchoice})`
+    let callElement= event.target
+    let currentElement= window.getComputedStyle(callElement)
+    let captureImage= currentElement.getPropertyValue('background-image').replace('url("http://127.0.0.1:5501/Projetos/Rock,%20Paper,%20Scissors%20game/', "").replace('")', '')
+        myElement.style.backgroundImage= `url(${captureImage})`
 
-    choicedesk(trchoice)
+    choicedesk(captureImage)
 
 }
 function choicedesk(primeElem){
@@ -29,52 +29,64 @@ function choicedesk(primeElem){
      switch (true) {
         case (primeElem=== elemenpos[2] && toelement.style.backgroundImage=== 'url("images/icon-scissors.svg")'):
               result++
-              obg.soma(result)
+              resultchange.soma(result)
             break;
         case (primeElem=== elemenpos[1] && toelement.style.backgroundImage=== 'url("images/icon-rock.svg")'):
               result++
-              obg.soma(result)
+              resultchange.soma(result)
                 break;
         case (primeElem=== elemenpos[0] && toelement.style.backgroundImage=== 'url("images/icon-paper.svg")'):
               result++
-              obg.soma(result)
+              resultchange.soma(result)
         default:
             break;
     }
-    obg.implement()
-    obg.lostWin(result)
+    resultchange.implement()
+    resultchange.lostWin(result)
 }
 
 
-const obg = {
+const resultchange = {
   result: 0,
 
   soma: function(res) {
-    this.result += res;
-  },
+            this.result += res;
+            localStorage.setItem('historic', this.result)
+        },
 
   implement: function() {
-    let numtab = document.querySelector('.tablenumber');
-    numtab.textContent = this.result;
-  },
+                 let numtable = document.querySelector('.tablenumber');
+                 numtable.textContent = this.result;
+             },
   
   lostWin: function(rest) {
-    let phrase = document.querySelector('.titlegame');
-    if (rest != 0) {
-      phrase.textContent= 'you win';
-    } else {
-      phrase.textContent= 'you lose';
-    }
-  }
+                let phrase = document.querySelector('.titlegame');
+             if(rest != 0) {
+                phrase.textContent= 'you win';
+             }else{
+                phrase.textContent= 'you lose';
+              }
+           }
 }
 
+function Loadhistoric(){
+    const tableresult= document.querySelector('.tablenumber')
+    const lasthistoric= localStorage.getItem('historic')
+
+    if(lasthistoric != 0){
+        tableresult.innerHTML= lasthistoric
+    }
+    else{
+       tableresult.innerHTML= ''
+   }
+}
 
 function returngame(){
     const modStyle= [document.querySelector('.items'), document.querySelector('.game'), document.querySelector('.titleitems')]
 
     if(modStyle[0].style.display!= '' && modStyle[1].style.display!= '' && modStyle[2].style.display!= ''){
-       modStyle[0].style.display= ''
-       modStyle[1].style.display= ''
-       modStyle[2].style.display= ''
+         modStyle[0].style.display= ''
+         modStyle[1].style.display= ''
+         modStyle[2].style.display= ''
       }
 }

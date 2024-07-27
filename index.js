@@ -16,8 +16,8 @@ function MenuApres(){
 }
 
 function Behavior(){
-    let Gett= [document.querySelector('.Look'), document.querySelector('.Contate'),
-               document.querySelector('.BehavioLeter'), document.querySelector('.Habilit')]
+    let Gett= [document.querySelector('.About'), document.querySelector('.welcomeHere'),
+               document.querySelector('.Contact'), document.querySelector('.Habilit')]
     
     if(Gett[0].style.left!= 7 + '%' || Gett[1].style.left!= -150 + '%' || Gett[2].style.left!= '' || Gett[3].style.left!= ''){
         Gett[0].style.left= 7 + '%'
@@ -30,8 +30,8 @@ function Behavior(){
     }
 }
 function BehaviorLeter(){
-  let Gette= [document.querySelector('.Look'), document.querySelector('.Contate'),
-              document.querySelector('.BehavioLeter'), document.querySelector('.Habilit')]
+  let Gette= [document.querySelector('.About'), document.querySelector('.welcomeHere'),
+              document.querySelector('.Contact'), document.querySelector('.Habilit')]
   if(Gette[0].style.left!= '' || Gette[1].style.left!= -150 + '%' || Gette[3].style.left!= ''){
     Gette[2].style.left= 0 + '%'
     Gette[0].style.left= ''
@@ -46,8 +46,8 @@ function BehaviorLeter(){
 }
 
 function Habylit(){
-    let Gytte= [document.querySelector('.Habilit'), document.querySelector('.Look'), document.querySelector('.Contate'),
-                 document.querySelector('.BehavioLeter')]
+    let Gytte= [document.querySelector('.Habilit'), document.querySelector('.About'), document.querySelector('.welcomeHere'),
+                 document.querySelector('.Contact')]
     if(Gytte[0].style.left!= 0 + '%' || Gytte[1].style.left!= '' || Gytte[2].style.left!= -150 + '%' || Gytte[3].style.left!= ''){
         Gytte[0].style.left= 0 + '%'
         Gytte[2].style.left= -150 + '%'
@@ -60,7 +60,7 @@ function Habylit(){
 }
 
 function MarginCont(){
-    const Imag= document.querySelector('.BehavioLeter')
+    const Imag= document.querySelector('.Contact')
     const Senttinel= window.innerWidth
 
     if(Senttinel<= 900){

@@ -23,7 +23,7 @@
             min-height: 100vh;
             background-color: black;
         }
-        .Look p{
+        .About p{
             color: white;
             font-family: 'Mukta', sans-serif;
             font-size: clamp(.8rem, 2.5vw, 1.0rem);
@@ -61,7 +61,7 @@
             text-transform: uppercase;
             text-shadow: 0px 0px 10px rgb(158, 1, 248);
         }
-        .Contate h2{
+        .welcomeHere h2{
             color: white;
             font-family: 'Oswald', sans-serif;
             font-size: clamp(1.3rem, 2.5vw, 2.5rem);
@@ -116,7 +116,7 @@
             border-radius: 50px;
             flex-shrink: 1;
         }
-        .Look{
+        .About{
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -192,7 +192,7 @@
             flex-direction: row;
             justify-content: center;
         }
-        .Contate{
+        .welcomeHere{
             grid-row: 1/5;
             width: 40vmax;
             display: flex;
@@ -246,7 +246,7 @@
         font-family: 'Mukta', sans-serif;
         font-size: clamp(.8rem, 2.5vw, 1.0rem);
        }
-       .BehavioLeter{
+       .Contact{
         grid-column: 2;
         grid-row: 1;
         width: max-content;
@@ -256,7 +256,7 @@
         transition: .5s;
         z-index: 2;
        }
-       .BehavioLeter ul{
+       .Contact ul{
         height: 100%;
         width: 15vmax;
         display: flex;
@@ -267,7 +267,7 @@
         position: relative;
         top: 10%;
        }
-       .BehavioLeter ul li{
+       .Contact ul li{
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -279,66 +279,66 @@
         width: 9vw;
         height: 10vh;
        }
-       .BehavioLeter ul li svg{
-        width: 3vw;
-        height: 3vh;
-       }
+       
        .Habilit{
         grid-column: 2;
-        grid-row: 1/5;
+        grid-row: 1/4;
         display: flex;
         flex-direction: row;
         align-items: center;
         position: relative;
+        padding-left: 3%;
         left: -110%;
-        width: 100%;
+        width: 90%;
         transition: .5s;
         z-index: 3;
+        overflow-x: scroll;
+        background-color: rgba(245, 245, 220, 0);
        }
-       .cssHabilit, .html, .jv{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 50vh;
+       .Habilit::-webkit-scrollbar{
+        height: 5px;
+        width: 5px;
        }
-       .cssHabilit, .html, .jv, ul{
-        flex-basis: 1;
-        flex-grow: 1;
+       .Habilit::-webkit-scrollbar-thumb{
+        background-image: linear-gradient(to left ,rgb(247, 45, 170)3%, rgb(181, 54, 254)98%);
+        border-radius: 5px;
        }
-       .css, .html, .jv, li{
-        color: white;
-        font-family: 'Oswald', sans-serif;
-        font-size: clamp(.2rem, 2.5vw, .9rem);
-        list-style: none;
-        flex-basis: 1;
-        flex-grow: 1;
-       }
-       .ImgLinguageHtml, .ImgLinguageJv, .ImgLinguageCss{
+       .ImgLinguage{
         width: 100%;
         height: max-content;
-        flex-basis: 1;
-        flex-grow: 1;
-        flex-shrink: 200;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
        }
-       .ImgLinguageHtml, .ImgLinguageJv,  .ImgLinguageCss, svg{
-        filter: drop-shadow(3px 2px 1.5px rgba(118, 0, 187, 0.726));
-        width: 100%;
-        height: 20vh;
-        flex-shrink: 200;
-        flex-grow: 1;
-        flex-basis: 1;
+       .BlockList{
+        overflow-y: scroll;
+        height: 10vmax;
+        display: flex;
+        width: 12vmax;
+        flex-direction: column;
        }
-       .ImgLinguageHtml, .ImgLinguageJv, .ImgLinguageCss, svg path{
-        flex-basis: 1;
-        flex-grow: 1;
-        flex-shrink: 200;
+       .BlockList::-webkit-scrollbar{
+        height: 5px;
+        width: 5px;
        }
-      
-
-
-
-
+       .BlockList::-webkit-scrollbar-thumb{
+        background-color: rgb(181, 54, 254);
+        border-radius: 5px;
+       }
+       .BlockList li{
+        color: white;
+        font-family: 'Mukta', sans-serif;
+        font-size: clamp(.2rem, 2.5vw, .9rem);
+       }
+       .BlockToHabilit{
+        margin-left: 3%;
+        width: 50vmax;
+        height: 25vmax;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+       }
        /*aplicação mobile*/
 
        @media (max-width: 900px) {
@@ -370,10 +370,10 @@
             left: 0%;
         }
         .InforMobile{
-            height: 6vmax;
+            height: 7vmax;
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             flex-direction: row;
             position: relative;
             align-items: center;
@@ -407,17 +407,20 @@
             box-shadow: none;
             color: rgb(195, 99, 255);
         }
-        .Look{
+        .About{
            position: absolute;
            top: 20%;
-           height: max-content;
+           height: 40%;
            width: 90%;
            z-index: 2;
+           overflow-y: scroll;
         }
-        .Look p{
+        .About p{
             width: 90%;
+            height: 100%;
         }
         .MagImg{
+            display: inline-block;
             margin: 0% auto 0;
             background-size: contain;
             background-position: 40%;
@@ -426,26 +429,27 @@
             width: 90%;
             flex-shrink: 0;
         }
-        .BehavioLeter{
+        .Contact{
             position: absolute;
             width: 100%;
             height: max-content;
             left: -100%;
             top: 20%;
         }
-        .BehavioLeter ul{
+        .Contact ul{
             flex-direction: row;
             height: max-content;
             width: 100%;
         }
-        .BehavioLeter ul li{
+        .Contact ul li{
             height: 8vmax;
+            width: max-content;
         }
-        .BehavioLeter svg{
+        .Contact svg{
         width: 10vw;
         height: 10vh;
        }
-        .Contate{
+        .welcomeHere{
             height: 60vmax;
             width: 90%;
             position: absolute;
@@ -456,38 +460,26 @@
         }
         .Habilit{
             width: 90%;
-            height: 35vmax;
-            padding-left: 0%;
-            justify-content: center;
-            align-items: flex-end;
+            height: 39vmax;
             z-index: 3;
             margin: 0 auto 0;
-            margin-top: 1%;
+            flex-wrap: wrap;
+            position: relative;
+            top: 10%
         }
-       .ImgLinguageHtml svg{
-        height: 100%;
-        flex-basis: 0;
-        flex-grow: 0;
-       }
-       .ImgLinguageCss svg{
-        height: 100%;
-        flex-basis: 0;
-        flex-grow: 0;
-       }
-       .ImgLinguageJv svg{
-        height: 100%;
-        flex-basis: 0;
-        flex-grow: 0;
-       }
-       .ImgLinguageHtml, .ImgLinguageJv, .ImgLinguageCss{
-        height: 15vmax;
-       }
-       .html, .jv, .cssHabilit{
-       margin: 0;
-       height: max-content;
-       }
-       }
-
+        .BlockToHabilit{
+            width: 40%;
+            height: 80%;
+        }
+        .ImgLinguage svg, .ImgLinguage img{
+            width: 90px;
+            height: 90px;
+        }
+        .BlockList{
+            width: 100%;
+            height: 100%;
+        }
+    }
     </style>
 </head>
 <body onload="MarginCont()" class="Unit">
@@ -514,69 +506,85 @@
         </lu>
         <section class="Habilit">
 
-            <div class="cssHabilit">
-                <div class="ImgLinguageCss">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -30 500 560" style="fill:#fdfdfd"><g id="Layer_2" data-name="Layer 2"><g id="css3"><path d="M224.67,512a9.88,9.88,0,0,1-2.7-.37L46.4,462.43a10,10,0,0,1-7.26-8.75L0,10.88A10,10,0,0,1,10,0H439.34a10,10,0,0,1,10,10.88L410.13,453.71a10,10,0,0,1-7.26,8.75l-175.5,49.17A9.88,9.88,0,0,1,224.67,512ZM58.45,445l166.22,46.58,166.15-46.56L428.42,20H20.92Z"/><path d="M224.58,419.76a10.18,10.18,0,0,1-2.68-.36L110.73,388.53a10,10,0,0,1-7.28-8.75l-7.76-87.21a10,10,0,0,1,10-10.89h54.47a10,10,0,0,1,10,9.11l3.42,38.29,51.08,13.83L276,329l6.29-57.46-179.2.49h0a10,10,0,0,1-10-9l-5.4-51.53a10,10,0,0,1,9.83-11.05l191.16-2.26L291.28,163l-199,.56h0a10,10,0,0,1-10-9.32l-3.52-51.32a10,10,0,0,1,10-10.68H360.58a10,10,0,0,1,10,10.89L365.7,157.4,360.77,213,345.86,379.79a10,10,0,0,1-7.29,8.74L227.31,419.38A9.73,9.73,0,0,1,224.58,419.76ZM122.76,371.11l101.82,28.27,102-28.27,14.3-159.87,4.93-55.62h0l3.87-43.38H99.47l2.15,31.29L302,143h0a10,10,0,0,1,10,10.73L308,208.87a10,10,0,0,1-9.85,9.26l-189.37,2.24L112.05,252l181.35-.5h0a10,10,0,0,1,9.94,11.08L295.12,338a10,10,0,0,1-7.34,8.57L227.61,362.8a10,10,0,0,1-5.61.13l-60.45-16.36a10,10,0,0,1-7.34-8.76L151,301.68H116.58ZM335.9,378.9h0Z"/></g></g></svg>
+            <div class="BlockToHabilit">
+                <div class="ImgLinguage">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -30 500 555" style="fill:#fdfdfd; filter: drop-shadow(1px 5px 3px rgb(181, 54, 254))" width="140px" height="140px"><g id="Layer_2" data-name="Layer 2"><g id="css3"><path d="M224.67,512a9.88,9.88,0,0,1-2.7-.37L46.4,462.43a10,10,0,0,1-7.26-8.75L0,10.88A10,10,0,0,1,10,0H439.34a10,10,0,0,1,10,10.88L410.13,453.71a10,10,0,0,1-7.26,8.75l-175.5,49.17A9.88,9.88,0,0,1,224.67,512ZM58.45,445l166.22,46.58,166.15-46.56L428.42,20H20.92Z"/><path d="M224.58,419.76a10.18,10.18,0,0,1-2.68-.36L110.73,388.53a10,10,0,0,1-7.28-8.75l-7.76-87.21a10,10,0,0,1,10-10.89h54.47a10,10,0,0,1,10,9.11l3.42,38.29,51.08,13.83L276,329l6.29-57.46-179.2.49h0a10,10,0,0,1-10-9l-5.4-51.53a10,10,0,0,1,9.83-11.05l191.16-2.26L291.28,163l-199,.56h0a10,10,0,0,1-10-9.32l-3.52-51.32a10,10,0,0,1,10-10.68H360.58a10,10,0,0,1,10,10.89L365.7,157.4,360.77,213,345.86,379.79a10,10,0,0,1-7.29,8.74L227.31,419.38A9.73,9.73,0,0,1,224.58,419.76ZM122.76,371.11l101.82,28.27,102-28.27,14.3-159.87,4.93-55.62h0l3.87-43.38H99.47l2.15,31.29L302,143h0a10,10,0,0,1,10,10.73L308,208.87a10,10,0,0,1-9.85,9.26l-189.37,2.24L112.05,252l181.35-.5h0a10,10,0,0,1,9.94,11.08L295.12,338a10,10,0,0,1-7.34,8.57L227.61,362.8a10,10,0,0,1-5.61.13l-60.45-16.36a10,10,0,0,1-7.34-8.76L151,301.68H116.58ZM335.9,378.9h0Z"/></g></g></svg>
                 </div>
-                <ul>
+                <ul class="BlockList">
+                    <li>unidades de medidas css</li>
                     <li>layout responsivo</li>
-                    <li>box-model</li>
                     <li>animações css</li>
                     <li>seletores css</li>
-                    <li>unidades de medidas css</li>
                     <li>psedeu-classes</li>
+                    <li>box-model</li>
                 </ul>
             </div>
  
-            <div class="html">
-                <div class="ImgLinguageHtml">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="5 0 40 50" style="fill:#fdfdfd">
+            <div class="BlockToHabilit">
+                <div class="ImgLinguage">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 49" style="fill:#fdfdfd; filter: drop-shadow(1px 5px 3px rgb(181, 54, 254));" width="140px" height="140px">
                     <path d="M 5.28125 2 C 4.765625 2.09375 4.410156 2.574219 4.46875 3.09375 L 8 42.53125 C 8.046875 42.933594 8.332031 43.265625 8.71875 43.375 L 24.71875 47.96875 C 24.902344 48.023438 25.097656 48.023438 25.28125 47.96875 L 41.28125 43.375 C 41.667969 43.265625 41.953125 42.933594 42 42.53125 L 45.53125 3.09375 C 45.558594 2.8125 45.464844 2.535156 45.273438 2.324219 C 45.082031 2.117188 44.8125 2 44.53125 2 L 5.46875 2 C 5.4375 2 5.40625 2 5.375 2 C 5.34375 2 5.3125 2 5.28125 2 Z M 6.5625 4 L 43.4375 4 L 40.09375 41.65625 L 25 45.9375 L 9.90625 41.65625 Z M 12.53125 10.0625 C 12.015625 10.15625 11.660156 10.636719 11.71875 11.15625 L 13.0625 25.9375 C 13.09375 26.453125 13.515625 26.859375 14.03125 26.875 L 30 26.875 L 29.5625 31.46875 L 25.03125 32.4375 L 20.4375 31.46875 L 20.28125 29.84375 C 20.25 29.316406 19.808594 28.90625 19.28125 28.90625 L 14.40625 28.90625 C 14.125 28.90625 13.855469 29.023438 13.664063 29.230469 C 13.472656 29.441406 13.378906 29.71875 13.40625 30 L 13.96875 36.125 C 14 36.527344 14.269531 36.875 14.65625 37 L 24.59375 40.03125 L 24.71875 40.0625 C 24.902344 40.117188 25.097656 40.117188 25.28125 40.0625 L 35.34375 37 C 35.742188 36.886719 36.027344 36.539063 36.0625 36.125 L 37.375 21.09375 C 37.402344 20.816406 37.3125 20.542969 37.128906 20.335938 C 36.945313 20.128906 36.683594 20.007813 36.40625 20 L 19.375 20 L 19.125 16.90625 L 36.84375 16.90625 C 37.363281 16.910156 37.796875 16.515625 37.84375 16 L 38.28125 11.15625 C 38.308594 10.875 38.214844 10.597656 38.023438 10.386719 C 37.832031 10.179688 37.5625 10.0625 37.28125 10.0625 L 12.71875 10.0625 C 12.65625 10.054688 12.59375 10.054688 12.53125 10.0625 Z M 13.8125 12.0625 L 36.1875 12.0625 L 35.9375 14.90625 L 18.03125 14.90625 C 17.75 14.90625 17.480469 15.023438 17.289063 15.230469 C 17.097656 15.441406 17.003906 15.71875 17.03125 16 L 17.5 21.09375 C 17.546875 21.597656 17.964844 21.988281 18.46875 22 L 35.3125 22 L 34.125 35.28125 L 25 38.03125 L 15.875 35.28125 L 15.5 30.90625 L 18.375 30.90625 L 18.5 32.375 C 18.53125 32.816406 18.847656 33.183594 19.28125 33.28125 L 24.84375 34.4375 C 24.976563 34.464844 25.117188 34.464844 25.25 34.4375 L 30.71875 33.28125 C 31.152344 33.183594 31.46875 32.816406 31.5 32.375 L 32.09375 25.9375 C 32.109375 25.660156 32.011719 25.390625 31.824219 25.191406 C 31.632813 24.988281 31.371094 24.875 31.09375 24.875 L 14.9375 24.875 Z"></path>
                 </svg>
                 </div>
-                <ul>
+                <ul class="BlockList">
+                    <li>multimidias e incorporações</li>
                     <li>ancoragem de link</li>
                     <li>inclusão de sites</li>
-                    <li>html semantico</li>
                     <li>atributos globais</li>
-                    <li>multimidias e incorporações</li>
                     <li>tipos de inputs</li>
+                    <li>html semantico</li>
                 </ul>
             </div>
  
-            <div class="jv">
-             <div class="ImgLinguageJv">
-                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"viewBox="0 0 50 50" style="fill:#fdfdfd">
-                     <path d="M 5.4648438 2 A 1.0001 1.0001 0 0 0 4.46875 3.0898438 L 7.9882812 42.515625 A 1.0001 1.0001 0 0 0 8.7089844 43.388672 L 24.71875 47.960938 A 1.0001 1.0001 0 0 0 25.267578 47.960938 L 41.292969 43.388672 A 1.0001 1.0001 0 0 0 42.013672 42.515625 L 45.53125 3.0898438 A 1.0001 1.0001 0 0 0 44.535156 2 L 5.4648438 2 z M 6.5585938 4 L 43.441406 4 L 40.083984 41.654297 L 24.994141 45.960938 L 9.9199219 41.654297 L 6.5585938 4 z M 19 10 A 1.0001 1.0001 0 0 0 18 11 L 18 29.628906 L 12.267578 28.041016 A 1.0001 1.0001 0 0 0 11 29.003906 L 11 33.949219 A 1.0001 1.0001 0 0 0 11.732422 34.912109 L 22.732422 37.962891 A 1.0001 1.0001 0 0 0 24 37 L 24 11 A 1.0001 1.0001 0 0 0 23 10 L 19 10 z M 27 10 A 1.0001 1.0001 0 0 0 26 11 L 26 28 A 1.0001 1.0001 0 0 0 27.169922 28.986328 L 32.917969 27.996094 L 32.798828 29.767578 L 26.734375 31.435547 A 1.0001 1.0001 0 0 0 26 32.398438 L 26 37 A 1.0001 1.0001 0 0 0 27.265625 37.964844 L 37.265625 35.214844 A 1.0001 1.0001 0 0 0 37.996094 34.335938 L 39.050781 22.085938 A 1.0001 1.0001 0 0 0 37.914062 21.009766 L 32 21.847656 L 32 16 L 38.654297 16 A 1.0001 1.0001 0 0 0 39.650391 15.085938 L 39.996094 11.085938 A 1.0001 1.0001 0 0 0 39 10 L 27 10 z M 20 12 L 22 12 L 22 35.685547 L 13 33.189453 L 13 30.318359 L 18.732422 31.908203 A 1.0001 1.0001 0 0 0 20 30.945312 L 20 12 z M 28 12 L 37.910156 12 L 37.736328 14 L 31 14 A 1.0001 1.0001 0 0 0 30 15 L 30 23 A 1.0001 1.0001 0 0 0 31.140625 23.990234 L 36.951172 23.166016 L 36.0625 33.470703 L 28 35.6875 L 28 33.162109 L 34.015625 31.507812 A 1.0001 1.0001 0 0 0 34.748047 30.611328 L 34.998047 26.861328 A 1.0001 1.0001 0 0 0 33.830078 25.808594 L 28 26.8125 L 28 12 z"></path>
-                 </svg>
+            <div class="BlockToHabilit">
+             <div class="ImgLinguage">
+               <svg xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(1px 5px 3px rgb(181, 54, 254))" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,250" width="140px" height="140px">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5.46484,2c-0.28085,-0.00001 -0.54877,0.11808 -0.73824,0.32539c-0.18948,0.20731 -0.28305,0.48474 -0.25785,0.76446l3.51953,39.42578c0.03655,0.41206 0.32303,0.7591 0.7207,0.87305l16.00977,4.57227c0.17936,0.05118 0.36946,0.05118 0.54883,0l16.02539,-4.57227c0.39768,-0.11395 0.68415,-0.46098 0.7207,-0.87305l3.51758,-39.42578c0.0252,-0.27972 -0.06837,-0.55715 -0.25785,-0.76446c-0.18948,-0.20731 -0.45739,-0.32539 -0.73824,-0.32539zM6.55859,4h36.88281l-3.35742,37.6543l-15.08984,4.30664l-15.07422,-4.30664zM19,10c-0.55226,0.00006 -0.99994,0.44774 -1,1v18.62891l-5.73242,-1.58789c-0.30098,-0.08354 -0.6237,-0.02166 -0.87244,0.16728c-0.24873,0.18894 -0.3949,0.48325 -0.39514,0.79561v4.94531c0.00032,0.44898 0.29982,0.84272 0.73242,0.96289l11,3.05078c0.30098,0.08354 0.6237,0.02166 0.87244,-0.16728c0.24873,-0.18894 0.3949,-0.48325 0.39514,-0.79561v-26c-0.00006,-0.55226 -0.44774,-0.99994 -1,-1zM27,10c-0.55226,0.00006 -0.99994,0.44774 -1,1v17c-0.00022,0.29507 0.12987,0.57518 0.35547,0.76538c0.2256,0.19019 0.52367,0.27106 0.81445,0.22095l5.74805,-0.99023l-0.11914,1.77148l-6.06445,1.66797c-0.43338,0.11944 -0.73381,0.51336 -0.73437,0.96289v4.60156c-0.0002,0.31225 0.14545,0.60667 0.39377,0.79598c0.24832,0.18931 0.57081,0.25177 0.87185,0.16887l10,-2.75c0.40339,-0.1113 0.69483,-0.46197 0.73047,-0.87891l1.05469,-12.25c0.0262,-0.30365 -0.0875,-0.60268 -0.30883,-0.81222c-0.22133,-0.20954 -0.52612,-0.30672 -0.82789,-0.26395l-5.91406,0.83789v-5.84766h6.6543c0.51888,-0.00015 0.95146,-0.39711 0.99609,-0.91406l0.3457,-4c0.02404,-0.27908 -0.07006,-0.55545 -0.2594,-0.76187c-0.18935,-0.20642 -0.45658,-0.32398 -0.73669,-0.32407zM20,12h2v23.68555l-9,-2.49609v-2.87109l5.73242,1.58984c0.30098,0.08354 0.6237,0.02166 0.87244,-0.16728c0.24873,-0.18894 0.3949,-0.48325 0.39514,-0.79561zM28,12h9.91016l-0.17383,2h-6.73633c-0.55226,0.00006 -0.99994,0.44774 -1,1v8c-0.00002,0.28977 0.12565,0.5653 0.34446,0.75527c0.21881,0.18996 0.50927,0.27568 0.79616,0.23497l5.81055,-0.82422l-0.88867,10.30469l-8.0625,2.2168v-2.52539l6.01563,-1.6543c0.40986,-0.1128 0.70362,-0.47237 0.73242,-0.89648l0.25,-3.75c0.02062,-0.30608 -0.10039,-0.60469 -0.32826,-0.81009c-0.22787,-0.20539 -0.53741,-0.29484 -0.83971,-0.24265l-5.83008,1.00391z">
+                </path>
+                </g></g>
+               </svg>
              </div>
-             <ul>
-                 <li>funções de callback</li>
-                 <li>logica de programação</li>
-                 <li>metodo switch case</li>
-                 <li>manipulação de array e objetos</li>
-                 <li>manipulação de string e number</li>
-                 <li>armazenamento de dados l/cliente</li>
+             <ul class="BlockList">
+                <li>criação de objetos</li>
+                <li>manipulação de array</li>
+                <li>manipulação de string</li>
+                <li>callback function</li>
+                <li>logica de programação</li>
+                <li>metodo switch case</li>
+                <li>Analize de bugs e erros</li>
+                <li>Expressões regulares</li>
+                <li>Prototype e herança</li>
+                <li>closure</li>
              </ul>
             </div>
  
+            <div class="BlockToHabilit">
+                <div class="ImgLinguage">
+                    <img src="imagem/icons8-elefante-php-96.png" style="filter: drop-shadow(1px 5px 3px rgb(181, 54, 254))" width="140px">
+                </div>
+                <ul class="BlockList">
+                    <li>Manipulação de Requisições HTTP</li>
+                    <li>Interação com Banco de Dados</li>
+                    <li>Geração de HTML Dinâmico</li>
+                </ul>
+               </div>
+
          </section>
-        <article class="Look">
+        <article class="About">
             <p>
-                Olá, meu nome é Ryan e eu sou um desenvolvedor de sistemas.
-                Gosto de tecnologia desde criança, sempre fui fascinado
-                pelo que ela faz, e sempre tive a curiosidade de entender
-                como ela funciona. Gosto de construir
-                algo com as minhas próprias mãos e resolver problemas, pois
-                no final a sastifação de observar tudo funcionando sem erro é
-                muito grande. estou a um ano estudando programação com
-                foco nas tecnologias front-end, mas com intenção
-                de aprender tambem as tecnologias do back-end e
-                me tornar um desenvolvedor full-stack.
+                Me chamo Ryan e sou estudante de Análise e Desenvolvimento de Sistemas.
+                Iniciei minha jornada na programação antes mesmo de ingressar na graduação,
+                sempre buscando crescimento na área de desenvolvimento web. Tenho uma forte
+                inclinação para a organização, acredito que ela traz muitos benefícios, seja
+                em projetos ou ambiente de trabalho. Gosto de diversificar minhas habilidades,
+                pois acredito que aprender um pouco de cada área e tecnologia possibilita 
+                encontrar novas soluções que normalmente não se encontra somente em um lugar 
+                específico. Sou curioso diante de novos problemas, o que me leva a criar 
+                soluções combinando diferentes elementos.
             </p>
      </article>
        
-     <section class="BehavioLeter">
+     <section class="Contact">
         <ul>
             <li>
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50" style="fill:#fdfdfd;">
@@ -600,7 +608,7 @@
             </li>
         </ul>
     </section>
-     <div class="Contate">
+     <div class="welcomeHere">
         <h1>welcome</h1>
         <h2>Hey, My name is Ryan, front-end web developer</h2>
         <a class="ClickProject" href="Projetos/index.html" target="_blank">project</a>

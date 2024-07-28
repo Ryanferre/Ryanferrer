@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: box-model;
+}
+html{
+   min-height: 100vh;
+}
+.Unit{
+   display: grid;
+   grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+   min-height: 100vh;
+   background-color: black;
+}
+.About p{
+   color: white;
+   font-family: 'Mukta', sans-serif;
+   font-size: clamp(.8rem, 2.5vw, 1.0rem);
+   text-transform: uppercase;
+   width: 38vmax;
+}
+h4{
+   color: rgb(255, 255, 255);
+   font-family: 'Oswald', sans-serif;
+   font-size: clamp(.3rem, 2.5vw, 1.0rem);
+   text-transform: uppercase;
+   height: max-content;
+   width: 20vmax;
+   margin: 1px;
+   text-align: center;
+   letter-spacing: 8px;
+}
+h3{
+   color: rgb(255, 255, 255);
+   font-family: 'Oswald', sans-serif;
+   font-size: clamp(1.0rem, 2.5vw, 1.3rem);
+   text-transform: uppercase;
+   height: max-content;
+   min-width: max-content;
+   margin: 1px;
+   transform: rotateZ(-90deg);
+   text-align: center;
+   letter-spacing: 8px;
+}
+.Styli h2{
+   color: rgb(157, 0, 255);
+   font-family: 'Oswald', sans-serif;
+   font-size: clamp(2.0rem, 2.5vw, 2.5rem);
+   font-weight: bolder;
+   text-transform: uppercase;
+   text-shadow: 0px 0px 10px rgb(158, 1, 248);
+}
+.welcomeHere h2{
+   color: white;
+   font-family: 'Oswald', sans-serif;
+   font-size: clamp(1.3rem, 2.5vw, 2.5rem);
+   font-weight: bolder;
+   text-transform: uppercase;
+   margin-bottom: 15%;
+}
+h1{
+   font-family: 'Oswald', sans-serif;
+   font-size: clamp(2.5rem, 2.5vw, 3.0rem);
+   color: rgb(255, 0, 153);
+   letter-spacing: 20px;
+}
+.Styli{
+   background-color: rgb(0, 0, 0);
+   grid-row: 1/5;
+   grid-column: 1;
+   width: 6.5vmax;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   box-shadow: 0px 0px 10px rgb(158, 1, 248);
+   gap: 25%;
+   z-index: 5;
+}
+.OpenMenu{
+   width: 3.5vmax;
+   height: 3.5vmax;
+   border-radius: 50px;
+   border: none;
+   border: solid 2px rgb(0, 0, 0);
+   background-color: black;
+   cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   z-index: 4;
+}
+.OpenMenu:hover{
+   border-color: blueviolet;
+   box-shadow: 0px 0px 10px rgb(158, 1, 248);
+}
+#Click{
+   border: solid 1px white;
+   width: 2vmax;
+   height: 2px;
+   content: '';
+   background-color: white;
+   border-radius: 50px;
+   flex-shrink: 1;
+}
+.About{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(108, 0, 250, 0);
+   width: 50vmax;
+   grid-row: 1/5;
+   grid-column: 2;
+   margin-left: 0%;
+   position: relative;
+   left: -100%;
+   top: 0;
+   z-index: 3;
+   transition: .5s;
+}
+.MenDiv{
+   width: 35vw;
+   height: max-content;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   left: 240%;
+}
+.Infor{
+   background-color: rgba(0, 0, 0, 0);
+   display: flex;
+   border-top-right-radius: 15px;
+   border-bottom-right-radius: 15px;
+   flex-direction: row;
+   justify-content: space-around;
+   width: 30vmax;
+   height: 4.5vmax;
+   z-index: 2;
+   position: relative;
+   left: -140%;
+   transition: .5s;
+   opacity: 0;
+}
+.InforMobile{
+   display: none;
+}
+.Infor li button{
+   list-style: none;
+   color: rgb(255, 0, 166);
+   width: 8vmax;
+   height: 3vmax;
+   text-align: center;
+   border: none;
+   background-color: rgba(0, 0, 0, 0);
+   cursor: pointer;
+   font-family: 'Mukta', sans-serif;
+   text-transform: uppercase;
+   font-size: clamp(.2rem, 2.5vw, .9rem);
+   transition: .3s;
+   border-left: solid 2px rgba(0, 0, 0, 0);
+   border-right: solid 2px rgba(137, 43, 226, 0);
+   border-bottom: solid 2px rgba(137, 43, 226, 0);
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+}
+.Infor li button:Hover{
+  color: rgb(195, 99, 255);
+  border-left: solid 2px blueviolet;
+  border-right: solid 2px blueviolet;
+  border-bottom: solid 2px blueviolet;
+  box-shadow: 0px 0px 10px rgb(181, 54, 254);
+}
+.Infor li{
+   list-style: none;
+   width: max-content;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+.welcomeHere{
+   grid-row: 1/5;
+   width: 40vmax;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   grid-column: 2;
+   position: relative;
+   left: 8%;
+   transition: .5s;
+   z-index: 1;
+}
+.ClickProject{
+   width: 11vmax;
+   padding: 3px 0 3px;
+   border: none;
+   border: solid  2px black;
+   border-radius: 50px;
+   background-color: rgba(137, 43, 226, 0);
+   box-shadow: 0px 0px 10px rgb(255, 0, 234);
+   transition: .3s;
+   cursor: pointer;
+   position: relative;
+   top: -10%;
+   color: white;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+   text-decoration: none;
+   text-align: center;
+}
+.ClickProject:hover{
+   box-shadow: 0px 0px 15px rgb(181, 54, 254);
+   border-color: rgb(183, 43, 226);
+}
+.MagImg{
+content: '';
+grid-row: 1/5;
+grid-column: 3;
+width: 40vw;
+background-image: url(imagem/computer.png);
+background-repeat: no-repeat;
+background-size: contain;
+background-position-Y: 56%;
+border: solid 1px;
+position: relative;
+left: 0;
+}
+a{
+color: white;
+text-decoration: none;
+font-family: 'Mukta', sans-serif;
+font-size: clamp(.8rem, 2.5vw, 1.0rem);
+}
+.Contact{
+grid-column: 2;
+grid-row: 1;
+width: max-content;
+position: relative;
+left: -100%;
+grid-row: 1/4;
+transition: .5s;
+z-index: 2;
+}
+.Contact ul{
+height: 100%;
+width: 15vmax;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+gap: 20%;
+position: relative;
+top: 10%;
+}
+.Contact ul li{
+list-style: none;
+display: flex;
+flex-direction: column;
+align-items: center;
+font-family: 'Mukta', sans-serif;
+font-size: clamp(.2rem, 2.5vw, .9rem);
+flex-basis: 1;
+flex-shrink: 1;
+width: 9vw;
+height: 10vh;
+}
+
+.Habilit{
+grid-column: 2;
+grid-row: 1/4;
+display: flex;
+flex-direction: row;
+align-items: center;
+position: relative;
+padding-left: 3%;
+left: -110%;
+width: 90%;
+transition: .5s;
+z-index: 3;
+overflow-x: scroll;
+background-color: rgba(245, 245, 220, 0);
+}
+.Habilit::-webkit-scrollbar{
+height: 5px;
+width: 5px;
+}
+.Habilit::-webkit-scrollbar-thumb{
+background-image: linear-gradient(to left ,rgb(247, 45, 170)3%, rgb(181, 54, 254)98%);
+border-radius: 5px;
+}
+.ImgLinguage{
+width: 100%;
+height: max-content;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+.BlockList{
+overflow-y: scroll;
+height: 10vmax;
+display: flex;
+width: 12vmax;
+flex-direction: column;
+}
+.BlockList::-webkit-scrollbar{
+height: 5px;
+width: 5px;
+}
+.BlockList::-webkit-scrollbar-thumb{
+background-color: rgb(181, 54, 254);
+border-radius: 5px;
+}
+.BlockList li{
+color: white;
+font-family: 'Mukta', sans-serif;
+font-size: clamp(.2rem, 2.5vw, .9rem);
+}
+.BlockToHabilit{
+margin-left: 3%;
+width: 50vmax;
+height: 25vmax;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+/*aplicação mobile*/
+
+@media (max-width: 900px) {
+.Unit{
+   display: flex;
+   flex-direction: column;
+}
+.Styli{
+  width: 100%;
+  height: 8vmax;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 14%;
+  z-index: 1;
+}
+h3{
+   transform: rotateY(0);
+}
+.OpenMenu{
+   width: 5.5vmax;
+   height: 5.5vmax;
+   border-radius: 10px;
+}
+.MenDiv{
+   width: max-content;
+   height: max-content;
+   flex-direction: column;
+   left: 0%;
+}
+.InforMobile{
+   height: 7vmax;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+   position: relative;
+   align-items: center;
+   left: -95%;
+   transition: .5s;
+   z-index: 4;
+}
+.Infor{
+   display: none;
+}
+.InforMobile li{
+   list-style: none;
+   width: max-content;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+.InforMobile li button{
+   border-radius: 0;
+   transition: .1s;
+   background-color: rgba(249, 89, 89, 0);
+   width: max-content;
+   height: max-content;
+   color: white;
+   border: none;
+}
+.InforMobile li button:hover{
+   border-left: none;
+   border-right: none;
+   border-bottom: none;
+   box-shadow: none;
+   color: rgb(195, 99, 255);
+}
+.About{
+  position: absolute;
+  top: 20%;
+  height: 40%;
+  width: 90%;
+  z-index: 2;
+  overflow-y: scroll;
+}
+.About p{
+   width: 90%;
+   height: 100%;
+}
+.MagImg{
+   display: inline-block;
+   margin: 0% auto 0;
+   background-size: contain;
+   background-position: 40%;
+   left: 0;
+   height: 45vmax;
+   width: 90%;
+   flex-shrink: 0;
+}
+.Contact{
+   position: absolute;
+   width: 100%;
+   height: max-content;
+   left: -100%;
+   top: 20%;
+}
+.Contact ul{
+   flex-direction: row;
+   height: max-content;
+   width: 100%;
+}
+.Contact ul li{
+   height: 8vmax;
+   width: max-content;
+}
+.Contact svg{
+width: 10vw;
+height: 10vh;
+}
+.welcomeHere{
+   height: 60vmax;
+   width: 90%;
+   position: absolute;
+   top: 15%;
+}
+.ClickProject{
+   width: 15vmax;
+}
+.Habilit{
+   width: 90%;
+   height: 39vmax;
+   z-index: 3;
+   margin: 0 auto 0;
+   flex-wrap: wrap;
+   position: relative;
+   top: 10%
+}
+.BlockToHabilit{
+   width: 40%;
+   height: 80%;
+}
+.ImgLinguage svg, .ImgLinguage img{
+   width: 90px;
+   height: 90px;
+}
+.BlockList{
+   width: 100%;
+   height: 100%;
+}
+}

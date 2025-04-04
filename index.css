@@ -125,10 +125,10 @@ h1{
    transition: .5s;
 }
 .MenDiv{
-   width: 35vw;
+   width: 38vw;
    height: max-content;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
    position: relative;
    left: 240%;
@@ -154,7 +154,7 @@ h1{
 .Infor li button{
    list-style: none;
    color: rgb(255, 0, 166);
-   width: 8vmax;
+   width: 7vmax;
    height: 3vmax;
    text-align: center;
    border: none;
@@ -170,7 +170,28 @@ h1{
    border-bottom-left-radius: 15px;
    border-bottom-right-radius: 15px;
 }
-.Infor li button:Hover{
+
+.Infor li a{
+   list-style: none;
+   color: rgb(255, 0, 166);
+   width: 7vmax;
+   height: 2.3vmax;
+   text-align: center;
+   border: none;
+   background-color: rgba(0, 0, 0, 0);
+   cursor: pointer;
+   font-family: 'Mukta', sans-serif;
+   text-transform: uppercase;
+   padding-top: 10px;
+   font-size: clamp(.2rem, 2.5vw, .9rem);
+   transition: .3s;
+   border-left: solid 2px rgba(0, 0, 0, 0);
+   border-right: solid 2px rgba(137, 43, 226, 0);
+   border-bottom: solid 2px rgba(137, 43, 226, 0);
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+}
+.Infor li button:Hover, .Infor li a:hover{
   color: rgb(195, 99, 255);
   border-left: solid 2px blueviolet;
   border-right: solid 2px blueviolet;

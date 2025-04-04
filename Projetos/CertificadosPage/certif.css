@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50vmax;
+    padding-left: 3%;
+}
+
+h1{
+    font-family: 'Oswald';
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 0px rgb(158, 1, 248);
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+h2, h3{
+    font-family: 'Oswald';
+    color: white;
+    text-shadow: 1px 2px 3px rgb(158, 1, 248);
+    box-shadow: 1px 2px 3px rgb(158, 1, 248);
+    padding: 5px 0px 5px 0px;
+}
+.Certificados_cursos{
+    padding: 0%;
+    display: flex;
+    width: 100%;
+    height: 400vmax;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: scroll;
+}
+
+.Certificados_Profissionais{
+    padding: 0%;
+    display: flex;
+    width: 100%;
+    height: max-content;
+    flex-direction: row;
+    gap: 1%;
+    overflow: scroll;
+}
+.Certificados_Profissionais li{
+    width: max-content;
+    height: max-content;
+    padding: 30px 50px 0px 50px;
+}
+
+.Certificados_cursos li{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 84vmax;
+    height: 15vmax;
+    gap: 3%;
+    padding: .5% 0% .5% 0%;
+}
+img{
+    width: 25%;
+    height: 100%;
+    border-radius: 10px;
+}
+p{
+    font-family: 'Oswald';
+    color: white;
+}
+.P_description_certification_pris{
+    width: 100%;
+}
+
+.infor_certification{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40vmax;
+}
+.porcen_infor{
+    width: 14vmax;
+    height: 6vmax;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.grafic{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+.N-Dominio {
+    background: rgb(158, 1, 248);
+    width: .6vmax;
+    height: .6vmax;
+    content: "";
+    border-radius: 50%;
+}
+.N-conhecimento{
+    background: black;
+    border: 1px solid white;
+    width: .4vmax;
+    height: .4vmax;
+    content: "";
+    border-radius: 50%;
+}
+.Infor_grafic label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.Flex_box-1{
+    background: conic-gradient(rgb(158, 1, 248) 0% 80%, black 80% 100%);
+    width: 3vmax;
+    height: 45%;
+    content: "";
+    border: solid 1px white;
+    border-radius: 50%;
+}
+.Flex_box-2{
+    background: conic-gradient(rgb(158, 1, 248) 0% 72%, black 72% 100%);
+    width: 35%;
+    height: 45%;
+    content: "";
+    border: solid 1px white;
+    border-radius: 50%;
+}
+.Flex_box-3{
+    background: conic-gradient(rgb(158, 1, 248) 0% 85%, black 85% 100%);
+    width: 35%;
+    height: 45%;
+    content: "";
+    border: solid 1px white;
+    border-radius: 50%;
+}
+.Flex_box-4{
+    background: conic-gradient(rgb(158, 1, 248) 0% 85%, black 85% 100%);
+    width: 35%;
+    height: 45%;
+    content: "";
+    border: solid 1px white;
+    border-radius: 50%;
+}
+.Flex_box-5{
+    background: conic-gradient(rgb(158, 1, 248) 0% 96%, black 96% 100%);
+    width: 35%;
+    height: 45%;
+    content: "";
+    border: solid 1px white;
+    border-radius: 50%;
+}
+.Flex_box-6{
+    background: conic-gradient(rgb(158, 1, 248) 0% 77%, black 77% 100%);
+    width: 35%;
+    height: 45%;
+    content: "";
+    border: solid 1px white;
+    border-radius: 50%;
+}
+.Flex_box-7{
+    background: conic-gradient(rgb(158, 1, 248) 0% 73%, black 73% 100%);
+    width: 35%;
+    height: 45%;
+    content: "";
+    border: solid 1px white;
+    border-radius: 50%;
+}
+.Flex_box-8{
+    background: conic-gradient(rgb(158, 1, 248) 0% 68%, black 68% 100%);
+    width: 35%;
+    height: 45%;
+    content: "";
+    border: solid 1px white;
+    border-radius: 50%;
+}
+.Flex_box-9{
+    background: conic-gradient(rgb(158, 1, 248) 0% 82%, black 82% 100%);
+    width: 35%;
+    height: 45%;
+    content: "";
+    border: solid 1px white;
+    border-radius: 50%;
+}
+strong{
+    color:rgb(158, 1, 248);
+    font-variant: small-caps;
+}
+

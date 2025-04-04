@@ -1,0 +1,160 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+html{
+    min-height: 100vh;
+}
+body{
+    background-color: black;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+}
+header{
+    width: 6.5vmax;
+    height: 100vh;
+    box-shadow: 0px 0px 10px rgb(158, 1, 248);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 1;
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(.3rem, 2.5vw, 1.0rem);
+    text-transform: uppercase;
+    transform: rotateZ(-90deg);
+    letter-spacing: 8px;
+    width: max-content;
+    flex-basis: 1;
+}
+li{
+    width: 100vmax;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    flex-basis: 1;
+}
+.Certificados_Profissionais li{
+    width: max-content;
+    height: max-content;
+}
+article{
+    width: 40vmax;
+    height: 100%;
+    flex-basis: 1;
+}
+img{
+    width: 25vw;
+    height: 20vw;
+    flex-basis: 1;
+}
+h2{
+    color: rgb(255, 0, 153);
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(.3rem, 2.5vw, 1.0rem);
+    text-transform: uppercase;
+}
+p{
+    font-size: clamp(.2rem, 2.4vw, .8rem);
+    font-family: sans-serif;
+    color: white;
+}
+strong{
+    color:rgb(108, 1, 248);
+    text-shadow: 0px 0px 15px rgb(162, 0, 255);
+}
+/*estilização das class*/
+.Project{
+    width: 100%;
+    margin: 2% auto 2%;
+    height: 93vh;
+    flex-basis: 0;
+}
+/*estilização dos elementos*/
+.Temp{
+    margin: .5% auto .5%;
+    width: 100vw;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    overflow-Y: scroll;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 3%;
+    flex-basis: 0;
+    scroll-behavior: smooth;
+}
+/*Construend*/
+.Constru{
+    filter: opacity(.3);
+}
+
+.Certificados_Profissionais{
+    padding: 0%;
+    display: flex;
+    width: 100%;
+    height: max-content;
+    flex-direction: row;
+    overflow: scroll;
+    padding-left: 8.5%;
+    padding-top: .7%;
+}
+/*versão mobile*/
+@media (max-width: 900px) {
+body{
+    flex-direction: column;
+    position: relative;
+}
+html{
+    height: max-content;
+}
+header{
+    width: 100%;
+    height: 9vmax;
+}
+h1{
+    transform: rotateZ(0deg);
+}
+article{
+    width: 80vw;
+    height: 20vh;
+    gap: 10%;
+}
+li{
+    width: 100%;
+    flex-direction: column;
+}
+p{
+    width: 100%;
+}
+img{
+    width: 40vw;
+}
+.Project{
+    width: 100%;
+    max-height: 100%;
+    padding-top: 25%;
+}
+.Temp{
+    width: 100%;
+    height: max-content;
+    margin: 0%;
+    align-items: center;
+    justify-content: space-around;
+}
+.Constru{
+    height: 20vh;
+    width: 50vw;
+}
+
+}

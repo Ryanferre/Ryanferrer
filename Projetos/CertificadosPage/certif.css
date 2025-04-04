@@ -54,7 +54,7 @@ h2, h3{
     display: flex;
     flex-direction: row;
     align-items: start;
-    width: 84vmax;
+    width: 88vmax;
     height: 17vmax;
     gap: 3%;
     padding: .5% 0% .5% 0%;
@@ -67,6 +67,7 @@ img{
 p{
     font-family: 'Oswald';
     color: white;
+    font-size: 15px;
 }
 .P_description_certification_pris{
     width: 100%;
@@ -188,5 +189,6 @@ p{
 strong{
     color:rgb(158, 1, 248);
     font-variant: small-caps;
+    font-size: 15px;
 }
 

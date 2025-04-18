@@ -345,7 +345,6 @@ font-size: clamp(.2rem, 2.5vw, .9rem);
 }
 .BlockToHabilit{
 margin-left: 3%;
-width: 50vmax;
 height: 25vmax;
 display: flex;
 flex-direction: column;

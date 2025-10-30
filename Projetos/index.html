@@ -23,6 +23,9 @@
             flex-direction: row;
             position: fixed;
         }
+        a{
+            outline: none;
+        }
         header{
             width: 6.5vmax;
             height: 100vh;
@@ -66,6 +69,9 @@
             width: 25vw;
             height: 100%;
             flex-basis: 1;
+        }
+        .imgWithWideth{
+            width: 23vw;
         }
         img:hover{
            opacity: .5;
@@ -167,10 +173,50 @@
 </head>
 <body>
     <header>
-        <h1>projetos web</h1>
+        <a href="/Ryanferrer/index.html">
+         <h1>projetos web</h1>
+        </a>
     </header>
         <div class="Project">
             <ul class="Temp">
+                <li>
+                    <a href="https://bifly.netlify.app/"><img class="imgWithWideth" src="https://i.postimg.cc/d3Sg5cTY/Design-sem-nome-1-removebg-preview.png" alt="relogio digital"></a>
+                    <article>
+                        <H2>E-commerce para venda de livros</H2>
+                        <p>
+                            A aplicação permite que usuários comprem ou anunciem livros, com interface adaptável ao perfil escolhido.
+                            Desenvolvida com React, TypeScript, MySQL, Node.js, Clerk, Prisma ORM e TailwindCSS.
+                            Oferece <strong>segurança de dados</strong>, <strong>interface intuitiva</strong> e <strong>UX/UI alinhada à proposta da aplicação</strong>.
+                        </p>
+                    </article>
+                </li>
+
+                <li>
+                    <a href="https://funirostudiesclone.netlify.app/"><img class="imgWithWideth" src="../imagem/funiroProject.png" alt="Rock, Paper, Scissors game"></a>
+                    <article>
+                        <H2>Furniro(clone)</H2>
+                        <p>Este projeto consiste em um e-commerce moderno e responsivo, construído utilizando React com TypeScript, 
+                            estilizado com <strong>TailwindCSS</strong>, com autenticação via <strong>Clerk</strong>, com back-end 
+                            utilizando <strong>Node.js</strong>, e navegação entre páginas utilizando <strong>React Router</strong>. A proposta é demonstrar uma aplicação SPA realista, simulando uma 
+                            loja virtual com funcionalidades básicas de catálogo, carrinho de compras, autenticação de usuário e 
+                            gerenciamento de estado.
+                        </p>
+                    </article>
+                </li>
+
+                <li>
+                    <a href="https://desafioankatech.netlify.app/"><img src="https://i.postimg.cc/L69b1Xwg/Design-sem-nome-2-removebg-preview.png" alt="relogio digital"></a>
+                    <article>
+                        <H2>Plata forma de criptoMoeda</H2>
+                        <p>
+                           A aplicação fullstack foi desenvolvida em TypeScript, com Node.js, Fastify, Prisma, Next.js e MySQL via Docker Compose.
+                           Inclui cadastro e listagem de clientes, além da visualização e alocação de ativos financeiros.
+                           Conta com um <strong>assistente de IA</strong> que analisa notícias e gráficos do mercado, auxiliando decisões de investimento.
+                           Também <strong>realiza o cálculo automático de ganhos e perdas</strong>, oferecendo uma visão clara do desempenho financeiro.
+                        </p>
+                    </article>
+                </li>
+
                 <li>
                     <a href="projeto-monitoramento/index.html"><img src="mobile (3).png" alt="relogio digital"></a>
                     <article>
@@ -230,25 +276,12 @@
                 <li>
                     <a href="https://ryanferre.github.io/ecommerce-choose-Best/"><img src="../imagem/chooseBest.png" alt="Rock, Paper, Scissors game"></a>
                     <article>
-                        <H2>chooseBest(<strong>EM DESENVOLVIMENTO</strong>)</H2>
+                        <H2>chooseBest</H2>
                         <p>Choose Best é uma página de e-commerce com as funcionalidades essenciais que uma loja virtual precisa para 
                            operar de forma eficiente. O projeto oferece ao cliente uma experiência agradável e de fácil interação. 
                            Foram utilizadas tecnologias como <strong>JavaScript</strong>, <strong>CSS</strong>, <strong>HTML</strong>, 
                            <strong>PHP</strong> e <strong>jQuery</strong>, que, combinadas, têm o papel de manipular, 
                            disponibilizar e exibir dados de forma dinâmica e intuitiva para o usuário.
-                        </p>
-                    </article>
-                </li>
-
-                <li>
-                    <a href="https://funirostudiesclone.netlify.app/"><img src="../imagem/funiroProject.png" alt="Rock, Paper, Scissors game"></a>
-                    <article>
-                        <H2>Furniro(clone)(<strong>EM DESENVOLVIMENTO</strong>)</H2>
-                        <p>Este projeto consiste em um e-commerce moderno e responsivo, construído utilizando React com TypeScript, 
-                            estilizado com <strong>TailwindCSS</strong>, com autenticação via <strong>Clerk</strong>, com back-end 
-                            utilizando <strong>Node.js</strong>, e navegação entre páginas utilizando <strong>React Router</strong>. A proposta é demonstrar uma aplicação SPA realista, simulando uma 
-                            loja virtual com funcionalidades básicas de catálogo, carrinho de compras, autenticação de usuário e 
-                            gerenciamento de estado.
                         </p>
                     </article>
                 </li>

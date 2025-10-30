@@ -68,7 +68,6 @@ function MarginCont(){
     }else{
         Imag.style.marginTop =''
     }
-    console.log(Senttinel)
     //deleta as chaves do objeto infor//
 }
 
